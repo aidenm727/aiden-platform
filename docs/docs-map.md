@@ -134,6 +134,7 @@ belong in Git.
 
 ## Portfolio Reviews
 
+- `docs/reviews/school-learning-refresh-transport-packaging-evidence-2026-09-06.md` — Dated non-canonical Tier-3 evidence preserving design, implementation/corrections, independent review, owner acceptance, substantive publication, and the refresh-packaging boundary.
 - `docs/reviews/ai-operating-environment-refresh-2026-09-06.md` — Dated non-canonical September operating profile and Tier-3 documentation/ownership reconciliation evidence preserving verification, review, owner acceptance, and publication chronology.
 
 July AI/environment records below are dated historical operating evidence, not

@@ -227,3 +227,97 @@ are recorded in the completion report. Only synthetic School data is used.
 The next gate is fresh independent Tier-3 review of the corrected exact candidate.
 The prior review is not a verdict on this correction. Owner acceptance, staging,
 commit, publication, deployment, and live-data access are not claimed.
+
+
+## Completed substantive checkpoint attestation — 2026-09-07
+
+This later entry preserves the chronology above. Earlier statements about
+pending review, acceptance, commit, and publication describe their respective
+candidate stages; they are not retroactively replaced by these completed facts.
+The owner supplied the final review and acceptance history in the attestation
+handoff. Publication observations below were verified during the separately
+authorized publication step; this documentation step makes no new remote query.
+
+The final independent Tier-3 review of the corrected six-path candidate completed
+with **no BLOCKING, MATERIAL, or MINOR findings**. The owner then explicitly
+accepted that exact candidate, fingerprint
+`4533d939fd6b87f972a95696b10a4121f463ff23040b5d737da7ad1122a52d5c`,
+before separately authorizing staging and exactly one local substantive commit.
+The fingerprint is SHA-256 of compact sorted-key JSON mapping the six
+repository-relative paths to their full file SHA-256 values.
+
+Exactly one substantive commit was created:
+`4a833b12a087bdb2f9e21833ba40b6915c9881d1`, with sole parent
+`7e40290450e95ce15bdb22d77cf61fd4349ada88` and subject
+`School Learning: add refresh transport packaging`. Its exact path boundary is:
+
+- `tools/school_learning/core.py`
+- `tools/school_learning/cli.py`
+- `tools/school_learning/__init__.py`
+- `tests/test_school_learning.py`
+- `docs/architecture/school-learning.md`
+- `docs/reviews/school-learning-refresh-transport-packaging-evidence-2026-09-06.md`
+
+Publication was separately and explicitly authorized for that exact commit to
+`origin refs/heads/main`. The read-only remote query immediately before the push
+returned `7e40290450e95ce15bdb22d77cf61fd4349ada88`. One normal non-force
+fast-forward push published only the authorized commit to that ref, using:
+
+```text
+git push --porcelain --no-follow-tags --recurse-submodules=no origin 4a833b12a087bdb2f9e21833ba40b6915c9881d1:refs/heads/main
+```
+
+The post-push remote query returned
+`4a833b12a087bdb2f9e21833ba40b6915c9881d1`. Local `main` and `origin/main`
+aligned there at 0 ahead / 0 behind; index and worktree were clean. Atlas was
+valid and synchronized, with no missing definitions or validation/sync warnings
+or errors. No other ref was published and no deployment occurred. These facts
+do not establish deployment, live School-data validation, or operational-runtime
+state, and do not expand the refresh-packaging boundary recorded above.
+
+## Later two-path attestation candidate
+
+- **Why:** Preserve completed review, acceptance, and substantive publication
+  facts and surface this dated evidence in the documentation map.
+- **Risk tier:** Tier 3, preserving the substantive checkpoint's authority and
+  publication chronology for the public repository evidence surface.
+- **Exact scope:** Append this attestation to
+  `docs/reviews/school-learning-refresh-transport-packaging-evidence-2026-09-06.md`
+  and add one Portfolio Reviews entry in `docs/docs-map.md`.
+- **Exclusions:** No third path, active-state, architecture, code, test,
+  dependency, configuration, staging, commit, ref, publication, deployment,
+  or unrelated external action.
+- **Authority established:** The current owner request authorizes only this
+  two-path documentation update and verification. This later candidate is not
+  itself yet independently reviewed, owner-accepted, committed, or published.
+  Prior publication authority is exhausted and grants no new external write.
+- **Protected boundaries:** Preserve historical bytes, generated ownership,
+  secrets, protected refs, live/private School data, and unrelated changes.
+  No network action; tests use synthetic fixtures, with Atlas and public-surface
+  checks explicitly inspecting the current repository.
+- **Observable result:** A chronological completed-action attestation and one
+  dated non-canonical evidence entry, without selecting new work or changing
+  canonical runtime or deployment state.
+- **Verification:** Native WSL Python focused public-surface suite, full native
+  suite, Atlas validate/missing/sync, whitespace and complete two-path diff
+  inspection, and exact staged/unstaged/untracked checks after the final write.
+  Commands and final outcomes accompany the candidate in the completion report;
+  no unexecuted check is claimed as passing here.
+- **Stop conditions:** Material publication contradiction, third-path need,
+  active-state or architecture change, unexpected generated change, unrepairable
+  in-scope verification issue, or shared Engineering Lifecycle anti-loop stop.
+- **Next decision boundary:** Fresh independent Tier-3 review of this exact
+  two-path candidate, followed by a separate owner acceptance decision; staging,
+  commit, and publication remain unauthorized.
+
+Local preflight reconfirmed the substantive commit, sole parent, subject, exact
+six paths and accepted committed-byte fingerprint above. Local tracking aligned
+at 0/0 and the index/worktree were clean. Atlas bootstrap was valid, healthy,
+and synchronized; canonical work selection remained intentionally idle.
+Python `3.10.12`, Git `2.34.1`, writable authorized targets, and a disposable
+synthetic `/var/tmp/refresh-attestation-` temporary-directory probe were checked.
+The sandbox helper failed before execution; approved native WSL execution
+provided the verification environment. The pre-edit public-surface suite passed
+19 tests. Final verification follows this last documentation mutation; the
+resulting two-path fingerprint is reported outside this file to avoid a
+self-referential digest.
