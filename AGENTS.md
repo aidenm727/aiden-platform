@@ -39,28 +39,54 @@ of those authorities.
 ## Authority to act
 
 - Review, analysis, diagnosis, inventory, and design authorization are read-only. Do not implement unless the owner explicitly authorizes implementation for the current task.
-- Before editing, state the exact authorized path set and scope. Modify only that set. If another path, capability, external target, or decision is needed, stop and request scope expansion.
-- Classify checkpoints by potential consequence under Workflow v1.1 in
+- Before editing, state primary scope and mechanically derived scope, including
+  exact paths as they become known. Effective scope is their bounded union under
+  `docs/standards/engineering-collaboration.md`. Derived scope covers only the
+  required Tier 2/3 dated evidence record, registered generated outputs of
+  authorized source changes, and task-owned temporary verification fixtures.
+  It cannot add canonical architecture, schemas, dependencies, configuration,
+  tests/policy changes, capabilities, protected data, or external systems.
+  Modify only effective scope; stop for non-derived scope expansion.
+- Classify checkpoints by potential consequence under Workflow v1.2 in
   `docs/standards/engineering-collaboration.md`; the highest applicable tier
   controls. A checkpoint brief records the boundary but never creates authority.
 - Preserve existing user changes. Do not infer authority from a writable sandbox, an approval prompt, a prior task, a generated context package, or a casual discussion of future work.
-- Ordinary implementation details may proceed without repeated approval when they remain inside an already authorized exact checkpoint and all stated stop conditions. Casual continuation language may acknowledge or continue that existing authority; it may not select a new checkpoint, convert analysis or design into implementation, expand writable scope, override a stop condition, or authorize publication or another external write.
+- Ordinary implementation, evidence creation, generation, correction, and
+  verification proceed without repeated approval inside an authorized checkpoint
+  and its effective scope. Casual continuation language may continue that
+  authority; it cannot select new work, convert analysis or design into
+  implementation, expand effective scope, override a consequential stop, or
+  authorize publication or another external write.
 - Do not read secret or credential values, authentication stores, private keys, tokens, cookies, secret files, shell-history databases, or credential-bearing environment values.
 - Do not access protected content or traverse, peel, select, expose, or mutate a protected reference without exact owner authorization.
-- Continue ordinary corrections only while goal, tier, paths, operations,
-  architecture, data boundary, dependencies, observable result, and stop
-  conditions remain unchanged. Stop on scope expansion or the shared anti-loop
-  conditions.
+- Continue automatic in-scope corrections while goal, accepted architecture,
+  risk tier, effective scope, dependencies, data/protected boundaries, and
+  external consequences remain unchanged. Stop for consequential decisions or
+  verification that cannot be repaired safely in scope under
+  `docs/architecture/engineering-lifecycle.md`.
+- Preserve explicit owner gates for consequential architecture/product choices,
+  protected/private/secret access, destructive operations and migration,
+  meaningful scope expansion, Tier 2/3 final candidate acceptance, publication,
+  deployment, external communications/writes, and financial commitments.
 
 ## Implementation and generated files
 
 - Keep shell network disabled unless the task explicitly authorizes the exact network action and destination.
 - Do not stage, commit, push, fetch, pull, merge, rebase, switch or create branches, change refs or remotes, write to external systems, install or change dependencies, change configuration, or perform destructive actions unless the task explicitly authorizes the exact action.
+- A checkpoint may separately and conditionally preauthorize exact staging and
+  one local commit only after explicit owner acceptance of the exact verified
+  and reviewed candidate. The collaboration standard defines the bounds; no
+  such authority is implicit in implementation or acceptance, and remote
+  publication remains separately explicit.
 - `docs/aiden-context.md` and `docs/infrastructure-snapshot.md` are generated and owned by `tools/generate-context.py`. Update authorized canonical sources first, then run the registered generator; never edit generated output directly.
 
 ## Verification
 
 - Run task-focused tests first when appropriate. The correct full Python suite is `PYTHONPATH=tools PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p 'test_*.py'`.
+- Baseline failures are non-blocking only when proven to predate the checkpoint,
+  outside its effective scope, unchanged, neither concealed nor worsened, and
+  explicitly reported. New or unexplained regressions remain failures; follow
+  the lifecycle's baseline comparison and bounded correction rules.
 - Run the tier-appropriate final broad verification after the last in-scope
   mutation. Any later mutation invalidates that run as final evidence. Keep
   synthetic fixtures separate from explicitly identified live-data smoke checks.

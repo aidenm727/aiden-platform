@@ -68,18 +68,21 @@ acknowledgment language may continue that existing authority, but it may not:
 
 - select a new checkpoint;
 - convert review, analysis, diagnosis, inventory, or design into implementation;
-- expand writable paths, capabilities, or external targets;
+- expand effective scope, capabilities, or external targets;
 - override a stop condition;
 - establish actor authorization; or
 - authorize publication, deployment, or any external write.
 
-Pause when an owner decision is required, authority or live state is missing,
-verification fails materially, documentation conflicts cannot be resolved
-within the accepted design, or the authorized boundary must expand.
+Continue ordinary implementation, required evidence creation, registered
+generation, correction, and verification inside effective scope. Pause for a
+consequential owner decision, missing authority or required live state,
+documentation conflicts that cannot be resolved within the accepted design,
+or verification that cannot be repaired safely inside scope. A failed check
+alone does not require an owner interruption.
 
-## Engineering Workflow v1.1
+## Engineering Workflow v1.2
 
-Workflow v1.1 scales assurance by potential consequence, not by line count or
+Workflow v1.2 scales assurance by potential consequence, not by line count or
 file count. Any Tier 3 trigger makes the checkpoint Tier 3. Mixed work uses the
 highest applicable tier unless lower-consequence work can be cleanly separated
 into its own checkpoint, authority, and evidence. Unresolved consequence or
@@ -143,7 +146,8 @@ Use one concise Markdown block with exactly these fields:
 
 - **Why:** Owner value and the problem being solved.
 - **Risk tier:** The tier and consequence-based trigger.
-- **Exact scope:** Authorized capabilities, paths, data, and targets.
+- **Exact scope:** Primary authorized capabilities, paths, data, and targets,
+  plus mechanically derived scope and its exact paths as they become known.
 - **Exclusions:** Excluded paths, operations, dependencies, systems, and
   follow-on work.
 - **Authority established:** Task, implementation, local commit when
@@ -163,20 +167,61 @@ Tier 2 and Tier 3 open one ordinary dated `docs/reviews/` evidence record and
 append lifecycle facts to that record or its compound evidence rather than
 creating parallel planning reports.
 
+### Primary and Mechanically Derived Scope
+
+Primary scope is the capability and exact path/data/target boundary explicitly
+authorized by the current owner instruction. Effective scope is primary scope
+plus only these mechanically derived consequences of that authorized work:
+
+- the required Tier 2/3 dated evidence record under `docs/reviews/`;
+- registered generated outputs of authorized canonical source changes, produced
+  only by their registered generator; and
+- task-owned temporary verification fixtures within the accepted data and
+  execution boundary.
+
+Record each derived path and its source or verification purpose before writing.
+Required evidence and generation do not require a new permission round when
+they satisfy these bounds. An explicit owner exclusion always controls.
+
+Derived scope cannot introduce or change canonical architecture, schemas,
+dependencies, configuration, tests or policy, another capability, protected
+data, or external systems. Temporary fixtures cannot serve as a route to
+changing tests, suppressing failures, or consuming unauthorized live data.
+A new canonical dependency requires an exact scope-expansion decision.
+This distinction does not authorize any implementation until the checkpoint
+has explicit bounded implementation authority.
+
 ### Separate Authority and Acceptance Gates
 
 - Explicit owner selection establishes task authority only.
 - Design acceptance approves the design only unless implementation authority
   is separately explicit in the same owner instruction.
-- Implementation authority names the exact capability, paths, data, targets,
-  and protected operations; it does not authorize acceptance or external
-  action.
+- Implementation authority names primary capability, paths, data, targets,
+  and protected operations; mechanically derived scope follows only the rules
+  above. It does not authorize acceptance or external action.
 - Verification and independent review establish evidence and findings, not
   owner acceptance.
 - Owner acceptance applies only to the exact verified and reviewed candidate.
 - Staging, local commits and ref changes, publication, deployment, migration,
   destructive operations, and every external write require separately explicit
   authority naming their exact targets and modes.
+
+A checkpoint may explicitly and conditionally preauthorize staging and one
+local commit of the exact owner-accepted candidate. That separate instruction
+must name the staging paths (including any derived outputs), local branch/ref,
+commit mode, and prohibited actions. It becomes executable only after final
+verification, required independent review and finding disposition, and
+explicit owner acceptance of that exact candidate. Any candidate change
+requires renewed applicable verification/review and acceptance; it cannot ride
+on the previous acceptance. Confirm the staged diff matches the accepted
+candidate, excludes unrelated owner changes, and stays within the conditional
+authority. This permission does not authorize another commit, ref operation,
+remote push, publication, or deployment.
+
+Consequential architecture/product decisions, protected/private/secret access,
+destructive operations and migration, meaningful scope expansion, Tier 2/3
+final candidate acceptance, remote publication, deployment, external
+communications/writes, and financial commitments remain explicit human gates.
 
 Silence does not accept. A Tier 1 owner may combine outcome acceptance with a
 separately explicit publication decision, but the two facts must remain clear.
@@ -192,10 +237,18 @@ protected paths.
 Use focused checks before mutation when useful, after coherent increments, and
 after corrections. Final broad verification follows the last mutation at the
 tier defined above; any later mutation invalidates it as final evidence. Do not
-repeat a full suite merely because work changes hands or documentation is
-rewritten. Synthetic selected, idle, and error behavior uses isolated fixtures;
+repeat a full suite merely because work changes hands or a report outside the
+candidate is rewritten; any candidate mutation still requires renewed final
+verification. Synthetic selected, idle, and error behavior uses isolated fixtures;
 live canonical files or data roots are limited to explicitly identified smoke
 or authorized live checks.
+
+Pre-existing failures may remain non-blocking only under the lifecycle's
+baseline-aware verification rule: prove they predate the checkpoint, lie
+outside effective scope, remain unchanged, are neither concealed nor worsened,
+and are explicitly reported. New or unexplained regressions remain failures.
+Do not label a failing command as passing because its debt is an approved
+baseline.
 
 `docs/architecture/engineering-lifecycle.md` owns correction continuation,
 verification sequencing, and anti-loop stops.
@@ -238,8 +291,11 @@ For every tier:
 2. Confirm generated files derive from authorized canonical sources and are
    synchronized.
 3. Inspect the complete diff and changed-path list against the brief.
-4. Obtain separate authority naming exact staging paths, local ref mutation,
-   remote ref or deployment target, mode, and prohibited actions.
+4. Confirm separate authority naming exact staging paths, local ref mutation,
+   remote ref or deployment target, mode, and prohibited actions. An explicit
+   conditional staging/one-local-commit instruction may already satisfy its
+   local boundary once its acceptance conditions hold; it never supplies
+   remote publication or deployment authority.
 5. Stage only authorized paths and verify the staged boundary.
 6. Create the minimum coherent commit or commits and record immutable identity.
 7. Perform only the exact authorized non-force push or deployment action.
@@ -251,7 +307,7 @@ For every tier:
 
 ### Atlas Boundary
 
-Workflow v1.1 adds no Atlas feature, command, schema, or simulated semantic
+Workflow v1.2 adds no Atlas feature, command, schema, or simulated semantic
 judgment. Atlas continues to observe deterministic repository facts. A generic
 preflight helper is eligible only after at least two real checkpoints reproduce
 stable checks worth automating; an Atlas change additionally requires a
@@ -376,6 +432,16 @@ During workflow calibration sessions:
   this contract,
 - improvements should be documented as engineering refinements,
 - the objective is to improve future engineering sessions rather than merely complete the current task.
+
+## Task Handoffs
+
+Repository-local contracts own durable workflow rules. A task handoff normally
+states only its outcome, accepted design, explicit authority, primary scope,
+exclusions, and exceptional stop conditions, with references to those owners.
+Do not reproduce the full workflow contract in every handoff. The checkpoint
+brief and compact evidence still record the task-specific boundary,
+verification, findings, and next decision; brevity does not omit authority or
+weaken a human gate.
 
 ## Completion Standard
 
