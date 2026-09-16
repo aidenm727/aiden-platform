@@ -6,11 +6,13 @@ the two disagree.
 
 ## Phase
 
-W1 — Engineering Workflow v1.1 — Published
+W2 — Engineering Workflow v1.2 — Published
 
 ## Active State
 
-W1 — Engineering Workflow v1.1 is owner-accepted, published, and complete. Clean
+W2 — Engineering Workflow v1.2 is the published repository workflow at
+`d40c2891bd5cf79f674498ac6b5fed6bb1beac47`, as confirmed by the current
+owner instruction. W1 remains historical published workflow evidence. Clean
 Foundation F1 remains historical published foundation evidence rather than
 active selected work. R1 — Repository Identity and Public/Private Boundary is
 owner-accepted, published, and complete. G14 Storage Orientation Snapshot is
@@ -25,11 +27,19 @@ owner-accepted, and is published and complete at
 2026-08-31. No implementation checkpoint is selected, and repository work
 selection is intentionally idle.
 
-Canonical state effective date: 2026-08-31.
+Canonical state effective date: 2026-09-16.
+
+C1 is a locally authorized baseline-cleanup candidate, not a published
+checkpoint or a selection of follow-on capability work. Its verification and
+acceptance boundary is recorded in
+`docs/reviews/current-state-baseline-debt-c1-evidence-2026-09-16.md`. The
+September 8 School storage spike is retained only as provisional dated
+evidence; its proposed architecture is not accepted and its unfinished review
+gate remains open. No School runtime or storage change is selected here.
 
 ## Mission Intent
 
-Preserve published W1, completed R1, G14, SL2-A, and the School Learning
+Preserve published W2, historical W1, completed R1, G14, SL2-A, and the School Learning
 Operational Loop, human authority, generated ownership, and all public/private
 boundaries while the owner selects future work. No deployment, live-data
 migration, Canvas/Gmail/Calendar integration, or operational-runtime state is
@@ -41,7 +51,8 @@ established.
 - Selected checkpoint: None.
 - G14 lifecycle: Owner-accepted, published, and complete; not active selected
   work. Deployment, live collection, and operational runtime are not claimed.
-- W1 lifecycle: Published and complete; not active selected work.
+- W2 lifecycle: Published repository workflow; not active selected work.
+- W1 lifecycle: Historical, published and complete; not active selected work.
 - R1 lifecycle: Owner-accepted, published, and complete; not active selected
   work.
 - SL2-A lifecycle: Owner-accepted, published, and complete; not active selected
@@ -80,6 +91,14 @@ requires explicit owner authority outside repository state and Atlas.
 `AGENTS.md` is the primary repository-local authority-interpretation contract.
 
 ## Evidence and History
+
+- `docs/reviews/engineering-workflow-v1-2-evidence-2026-09-16.md` — W2
+  implementation evidence at `d40c2891bd5cf79f674498ac6b5fed6bb1beac47`.
+  Its pre-publication narrative is historical; the current owner confirms
+  publication. No remote was contacted during C1.
+- `docs/reviews/school-learning-vnext-storage-spike-evidence-2026-09-08.md`
+  — provisional synthetic storage findings, retained without architecture
+  promotion or completion of the original review gate.
 
 - `docs/current-state.json` — canonical typed active state and repository-local
   evidence references.

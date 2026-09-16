@@ -23,7 +23,7 @@ no implementation or operation is claimed.
 | Capability | Status | Proof |
 | --- | --- | --- |
 | School Learning | Implemented; used in a bounded owner pilot | [Architecture](docs/architecture/school-learning.md), [implementation](tools/school_learning/), [tests](tests/test_school_learning.py), [pilot evaluation](docs/reviews/school-learning-v0-1-pilot-evaluation-2026-07-21.md) |
-| Atlas and Workflow v1.1 | Implemented; operational as the repository workflow | [`./atlas`](atlas), [typed state](docs/current-state.json), [W1 evidence](docs/reviews/engineering-workflow-v1-1-evidence-2026-08-01.md) |
+| Atlas and Workflow v1.2 | Implemented; operational as the repository workflow | [`./atlas`](atlas), [typed state](docs/current-state.json), [W2 evidence](docs/reviews/engineering-workflow-v1-2-evidence-2026-09-16.md) |
 | Task-scoped context compilation | Implemented library capability; no general public CLI claim | [Architecture](docs/architecture/task-scoped-agent-context-compilation.md), [compiler](tools/atlas/platform/context_compilation/), [selection](tools/atlas/platform/reasoning/context_selection.py), [tests](tests/test_context_compilation.py) |
 | Self-hosted infrastructure | Dated operational evidence; continuous state is not claimed | [Public-safe infrastructure](docs/infrastructure.md), [virtualization record](docs/infrastructure-virtualization.md), [service capabilities](docs/services.md) |
 
@@ -93,14 +93,14 @@ identity, provenance, byte budgets, omissions, and consumer constraints. This
 is a library capability, not a claim of a general public CLI or production
 service.
 
-### Atlas and Workflow v1.1
+### Atlas and Workflow v1.2
 
 Atlas turns registered repository facts into deterministic inspection,
 validation, synchronization, review, and next-action reports. The
 [canonical state](docs/current-state.json),
 [collaboration standard](docs/standards/engineering-collaboration.md),
 [readiness tests](tests/test_atlas_readiness.py), and
-[W1 evidence](docs/reviews/engineering-workflow-v1-1-evidence-2026-08-01.md)
+[W2 evidence](docs/reviews/engineering-workflow-v1-2-evidence-2026-09-16.md)
 show how typed state remains separate from owner authority.
 
 ## Engineering Quality
@@ -171,7 +171,7 @@ The repository-local lifecycle below concerns the earlier repository-identity
 R1 and published engineering phases, not acceptance or publication of this
 September recalibration.
 
-The [canonical state](docs/current-state.json) keeps W1 as the published phase,
+The [canonical state](docs/current-state.json) keeps W2 / Workflow v1.2 as the published phase,
 records R1 as owner-accepted, published, and complete, and intentionally
 selects no implementation checkpoint. S1, F2, F3, and all other future work
 remain unselected; the next decision is owner selection of future work. The
@@ -183,7 +183,7 @@ commit `483f1111257c9b1608c100cb88c8304a17d85314`.
 
 Aiden Platform began as a ThinkPad T430 homelab and grew into a broader personal
 engineering platform. Current delivered capability centers on School Learning,
-Atlas/Workflow v1.1, task-scoped context compilation, and public-safe dated
+Atlas/Workflow v1.2, task-scoped context compilation, and public-safe dated
 infrastructure evidence. Local AI, a private operations repository, broader
 knowledge sovereignty, and additional recovery proof remain future or
 conditional work.

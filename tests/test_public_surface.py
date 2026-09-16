@@ -608,7 +608,7 @@ class PublicSurfaceTests(unittest.TestCase):
 
     def test_active_state_preserves_published_school_learning_and_intentional_idle(self) -> None:
         state = json.loads(self.text["docs/current-state.json"])
-        self.assertEqual(state["phase"]["id"], "engineering-workflow-v1-1")
+        self.assertEqual(state["phase"]["id"], "engineering-workflow-v1-2")
         self.assertEqual(state["phase"]["lifecycle"], "published")
         self.assertEqual(state["work_selection"]["status"], "intentional_idle")
         self.assertIsNone(state["work_selection"]["selected_checkpoint"])
@@ -621,7 +621,7 @@ class PublicSurfaceTests(unittest.TestCase):
         self.assertEqual(state["decision_required"]["evidence_refs"], [])
         self.assertEqual(state["blockers"], [])
         self.assertEqual(state["unknowns"], [])
-        self.assertEqual(state["freshness"]["effective_date"], "2026-08-31")
+        self.assertEqual(state["freshness"]["effective_date"], "2026-09-16")
         self.assertIn(
             {
                 "id": "school-learning-operational-loop-publication",

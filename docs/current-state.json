@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "phase": {
-    "id": "engineering-workflow-v1-1",
-    "name": "W1 — Engineering Workflow v1.1",
+    "id": "engineering-workflow-v1-2",
+    "name": "W2 — Engineering Workflow v1.2",
     "lifecycle": "published",
-    "effective_date": "2026-08-01",
+    "effective_date": "2026-09-16",
     "evidence_refs": [
-      "engineering-workflow-v1-1-publication"
+      "engineering-workflow-v1-2-publication"
     ]
   },
   "work_selection": {
@@ -23,6 +23,12 @@
   },
   "evidence_links": [
     {
+      "id": "engineering-workflow-v1-2-publication",
+      "path": "docs/reviews/engineering-workflow-v1-2-evidence-2026-09-16.md",
+      "relation": "records_phase",
+      "commit": "d40c2891bd5cf79f674498ac6b5fed6bb1beac47"
+    },
+    {
       "id": "engineering-workflow-v1-1-publication",
       "path": "docs/reviews/engineering-workflow-v1-1-evidence-2026-08-01.md",
       "relation": "records_phase",
@@ -36,7 +42,7 @@
     }
   ],
   "freshness": {
-    "effective_date": "2026-08-31",
+    "effective_date": "2026-09-16",
     "review_after": null
   },
   "authority": {

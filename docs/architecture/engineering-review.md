@@ -15,7 +15,7 @@ Engineering Review should make engineering guidance understandable, traceable, a
 It should not generate guidance independently of Engineering Interpretation.
 
 This Atlas interface is distinct from the fresh independent checkpoint review
-required by Workflow v1.1. Running `./atlas review`, reviewing one’s own work,
+required by Workflow v1.2. Running `./atlas review`, reviewing one’s own work,
 or producing an implementation report does not satisfy that independent gate.
 
 ## Core Principle

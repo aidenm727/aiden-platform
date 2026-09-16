@@ -213,7 +213,7 @@ This decision should be based on architecture, current mission, validation state
 Repository work selection records the decision but does not grant permission to
 act. A checkpoint may be selected only by explicit owner decision.
 
-Classify the selected work under Workflow v1.1 and record its checkpoint brief.
+Classify the selected work under Workflow v1.2 and record its checkpoint brief.
 
 ## 5. Preflight
 

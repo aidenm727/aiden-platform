@@ -138,6 +138,10 @@ observation own current reality; secret values never belong in Git.
 
 ## Portfolio Reviews
 
+- `docs/reviews/current-state-baseline-debt-c1-evidence-2026-09-16.md` — C1 baseline-cleanup candidate evidence; verification and owner-acceptance boundaries remain explicit.
+- `docs/reviews/engineering-workflow-v1-2-evidence-2026-09-16.md` — Dated W2 implementation evidence; Workflow v1.2 is the published phase recorded in canonical current state.
+- `docs/reviews/school-learning-vnext-storage-spike-evidence-2026-09-08.md` — Retained provisional synthetic evidence, public-surface sanitized in C1; no architecture acceptance, promotion, or completed final spike review is claimed.
+
 - `docs/reviews/platform-operating-model-recalibration-r1-evidence-2026-09-15.md` — Dated non-canonical Tier-3 September recalibration evidence, including the authorized baseline verification exception; distinct from the historical repository-identity R1.
 
 - `docs/reviews/school-learning-refresh-transport-packaging-evidence-2026-09-06.md` — Dated non-canonical Tier-3 evidence preserving design, implementation/corrections, independent review, owner acceptance, substantive publication, and the refresh-packaging boundary.
