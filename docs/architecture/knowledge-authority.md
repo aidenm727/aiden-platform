@@ -60,6 +60,20 @@ Examples:
 
 Every important item should be understood by authority class and owner.
 
+Canonical authority is source-scoped, not physically centralized. A designated
+owner may be this root repository, a specialized engineering repository, a
+restricted operational record, an external system, or a live system. Location
+alone grants neither knowledge authority nor permission to act. One explicit
+owner remains responsible for each durable fact or responsibility; references
+must preserve that owner's scope, provenance, sensitivity, and freshness.
+
+Root Platform architecture, specialized project engineering, restricted desired
+operational state, secret values, and current runtime observation are distinct
+responsibilities. `docs/architecture/repository.md` owns their repository
+placement and the accepted Homelab candidate boundary. Secrets stay outside
+Git; live systems and fresh observation own current operational reality.
+Repository-local state and Atlas do not summarize all Platform activity.
+
 ---
 
 ## Knowledge and Evidence Classes
@@ -223,8 +237,10 @@ Examples:
 - AI architecture -> `docs/architecture/ai.md`.
 - AI operating rules -> `docs/architecture/ai-operating-model.md`.
 - Knowledge authority -> this document.
-- Typed active state -> `docs/current-state.json`; human-readable companion -> `docs/current-mission.md`.
-- Deployed state -> infrastructure records.
+- This repository's typed active state -> `docs/current-state.json`; human-readable companion -> `docs/current-mission.md`.
+- Public-safe infrastructure patterns and dated observations -> infrastructure records.
+- Exact non-secret desired operational state -> an explicitly designated restricted source when separately designed.
+- Current runtime reality -> live systems and fresh observation.
 - Repeatable expectations -> standards.
 - Change evidence -> operations.
 - Future sequencing -> roadmaps.

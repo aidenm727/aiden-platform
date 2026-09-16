@@ -2,11 +2,38 @@
 
 ## Purpose
 
-The repository is the canonical engineering knowledge record for the Aiden Platform.
+`aiden-platform` is the root Platform engineering repository. It owns Platform-wide architecture, shared capabilities and systems, cross-domain contracts, root engineering coordination, and responsibilities explicitly assigned to it.
 
 It preserves vision, architecture, standards, infrastructure, operations, roadmaps, Repository Objects, generated context, and engineering tools.
 
 Every file and directory should have one clear responsibility.
+
+## Source-Scoped Engineering Ownership
+
+Canonical authority follows explicitly designated responsibilities, not physical
+centralization. This root repository does not own every Platform fact or all
+engineering activity. Specialized engineering repositories, restricted
+operational records, external systems, and live systems may own distinct facts
+and responsibilities. Each durable responsibility has one explicit owner;
+references preserve scope, provenance, and freshness instead of copying truth.
+`docs/architecture/knowledge-authority.md` owns those authority principles.
+
+A specialized canonical engineering repository is permitted when independent
+engineering responsibility, recurring maintenance or change, clearer ownership
+or audience, or meaningful independent lifecycle value earns the boundary.
+This is selective, not one repository per capability or domain. Root Platform
+architecture and cross-domain contracts remain here; a specialized repository
+owns only its designated project or system engineering scope.
+
+Homelab is the first accepted specialized-repository candidate and boundary,
+based on the owner's current evidence outside this repository together with
+repository evidence. The September 2026 recalibration accepts that boundary;
+it does not create a repository, extract or migrate Homelab material, or claim
+that external evidence was independently inspected in this checkpoint.
+
+Atlas remains local to `aiden-platform`. This ownership model introduces no
+repository registry, synchronization protocol, federation runtime, or change
+to task-context compilation.
 
 ## Repository Identity
 
@@ -79,13 +106,15 @@ Current owner:
 
 ### Canonical Active State
 
-`docs/current-state.json` is the strict typed owner of effective active state:
+`docs/current-state.json` is the strict typed owner of this repository's effective active state:
 phase, selected work or intentional idle, blockers, unknowns, pending owner
 decision, evidence links, freshness, and fixed external-authority sentinels.
 
 `docs/current-mission.md` is its short canonical human-readable companion.
 Machine-readable state wins on conflict, and missing or invalid typed state
-fails closed.
+fails closed. These records and Atlas describe their declared repository scope,
+not a universal ledger of Platform or domain activity. They grant no task,
+implementation, publication, deployment, or external-write authority.
 
 ### Infrastructure
 
@@ -160,14 +189,22 @@ Generated artifacts must declare their sources, managing tool, and generated sta
 
 ## Public and Private Ownership
 
-The public repository owns vision, architecture, standards, code, tests,
-public state, sanitized infrastructure patterns, and dated public evidence.
+Within its assigned scope, the public root repository owns vision, architecture,
+standards, code, tests, public repository state, sanitized infrastructure
+patterns, and dated public evidence.
 
-A future private operations repository may be created only when exact
-deployment configuration, inventory, addressing, private DNS, backup
-destinations, recovery procedures, incidents, or private live evidence require
-durable version control. It does not exist merely because public prose was
-generalized.
+Exact non-secret Homelab desired operational state is accepted as deserving a
+separately designed restricted canonical source when a concrete durable
+operational artifact is identified. Possible artifacts include deployment
+configuration, inventory, addressing, private DNS, backup destinations, or
+recovery procedures. A private operations repository is one possible form;
+its design and creation require separate authority. No restricted source is
+created by this checkpoint or merely by generalizing public prose.
+
+Restricted desired state describes intended operation. Dated restricted
+observations or incidents, when explicitly assigned an owner, remain evidence
+rather than continuous live truth. Specialized Homelab engineering ownership
+and restricted operational ownership are distinct responsibilities.
 
 Secret values, private keys, tokens, and recovery keys belong only in a secret
 manager or protected operational storage and never in either Git repository.
@@ -192,9 +229,11 @@ Public infrastructure records follow these rules:
 
 ## Source of Truth Hierarchy
 
-GitHub is the canonical documentation source.
+GitHub is the canonical documentation source for this repository.
 
-The repository is the canonical source of truth for Aiden Platform engineering knowledge.
+The repository is the canonical source of truth for its assigned root Platform
+engineering responsibilities. The hierarchy below applies within that scope;
+it does not override a designated external or specialized owner.
 
 Architecture documents define intent.
 
@@ -235,7 +274,7 @@ generated context, historical records, and roadmaps do not grant permission.
 - Personal course materials, answers, learning history, and generated personal views remain outside the engineering repository. The repository owns School Learning architecture and implementation, not personal school data.
 - The repeatable manual knowledge-promotion workflow belongs in `docs/knowledge-promotion.md`.
 - Strategic sequencing belongs in `docs/roadmaps/platform-strategy.md`.
-- Typed active phase and work selection belong in `docs/current-state.json`.
+- This repository's typed active phase and work selection belong in `docs/current-state.json`.
 - Concise human-readable current intent belongs in `docs/current-mission.md`.
 - Repository-local authority interpretation belongs in `AGENTS.md`.
 - Public-safe infrastructure patterns and dated evidence belong in
@@ -302,6 +341,6 @@ A healthy repository should make it easy to answer:
 
 ## Future Direction
 
-The repository should evolve as the engineering knowledge system for the Aiden Platform through repository-owned metadata, search, impact analysis, reliable artifacts, bounded task context, versioned skills, human-reviewed knowledge promotion, and clearer roadmap relationships.
+The repository should evolve as the root engineering knowledge system for its assigned Platform scope through repository-owned metadata, search, impact analysis, reliable artifacts, bounded task context, versioned skills, human-reviewed knowledge promotion, and clearer roadmap relationships.
 
 It should become more capable without becoming the platform's primary outcome.

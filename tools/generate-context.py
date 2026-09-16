@@ -127,9 +127,12 @@ Generated: {generated_date} (canonical-state effective date; deterministic)
 ## Purpose
 
 This file is an AI-readable generated context packet for the public Aiden
-Platform engineering repository. It projects canonical active state, its human
-companion, and the registered public-safe infrastructure snapshot. It is
-generated and non-canonical.
+Platform engineering repository within its assigned root/shared scope. It
+projects repository-local canonical active state, its human companion, and the
+registered public-safe infrastructure snapshot. It is generated and
+non-canonical, not a universal ledger of Platform activity. Designated sources
+retain their own authority; see docs/architecture/knowledge-authority.md and
+docs/architecture/repository.md for ownership.
 
 {active_state_projection}
 

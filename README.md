@@ -3,8 +3,10 @@
 > A human-directed engineering platform for applied AI, deterministic tooling,
 > and self-hosted infrastructure.
 
-Aiden Platform is a personal engineering record for building useful capability
-with explicit authority, reproducible evidence, and replaceable technology.
+`aiden-platform` is the root Platform engineering repository for shared systems,
+Platform-wide architecture, cross-domain contracts, and explicitly assigned
+responsibilities. It supports useful capability with explicit authority,
+reproducible evidence, and replaceable technology.
 It is not a production SaaS platform, proof of continuous uptime, or a claim of
 autonomous operation.
 
@@ -40,6 +42,12 @@ establishes implementation and operation.
 
 ## Architecture
 
+Canonical authority is source-scoped. This root record, selectively earned
+specialized engineering repositories, restricted operational records, external
+systems, and live systems may own distinct responsibilities. Atlas and typed
+state describe this repository; they are not a universal Platform ledger.
+See [Repository Architecture](docs/architecture/repository.md) for ownership.
+
 ```text
 Human owner
   ├── goals, authority, review, acceptance
@@ -55,9 +63,9 @@ Public engineering record
           │
           └── public-safe patterns ─────► Self-hosted execution environments
 
-Future private operations record
-  └── exact configuration, inventory, recovery, and private evidence
-      (never secret values)
+Future restricted operational source, separately designed
+  └── exact non-secret desired state when a durable artifact is identified
+      (current reality remains owned by live systems and fresh observation)
 ```
 
 ## Proof in Practice
@@ -139,17 +147,29 @@ git clone https://github.com/aidenm727/aiden-platform.git
 
 | Fact class | Canonical owner |
 | --- | --- |
-| Vision, architecture, standards, code, tests, public state and evidence | This public repository |
+| Root/shared Platform architecture, standards, code, tests, repository state and evidence within assigned scope | This public repository |
+| Independently substantial project/system engineering | An explicitly designated specialized repository when earned; Homelab is the first accepted candidate |
 | Sanitized infrastructure patterns and dated public evidence | This public repository |
-| Exact inventory, addressing, private DNS, deployment configuration, backup destinations, recovery runbooks, incidents, and private live evidence | A future private operations repository, only when a real versioned artifact requires it |
+| Exact non-secret Homelab desired operational state | A separately designed restricted canonical source when a concrete durable operational artifact is identified |
 | Secret values, private keys, tokens, and recovery keys | Secret manager or protected operational storage; never Git |
 | Current live reality | Live systems and fresh observation |
 | GitHub description, topics, settings, rules, and integrations | GitHub itself; only dated summaries belong here |
 
-The canonical boundary and trigger for any future private repository are in
+The canonical boundaries and trigger for a future restricted source are in
 [Repository Architecture](docs/architecture/repository.md).
 
 ## Current and Future
+
+The September 2026 operating-model recalibration accepts Homelab as a
+specialized-repository candidate; it does not create that repository or move
+content. Suitable capabilities may incubate through natural or conversational
+use and earn software through recurring need. AI/tool recommendations remain
+advisory and human-overridable under the existing
+[AI Operating Model](docs/architecture/ai-operating-model.md).
+
+The repository-local lifecycle below concerns the earlier repository-identity
+R1 and published engineering phases, not acceptance or publication of this
+September recalibration.
 
 The [canonical state](docs/current-state.json) keeps W1 as the published phase,
 records R1 as owner-accepted, published, and complete, and intentionally

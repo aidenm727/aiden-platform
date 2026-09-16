@@ -17,6 +17,7 @@ The model governs:
 - Failure and fallback behavior.
 - Human approval boundaries.
 
+Selection is task-specific, evidence-backed, advisory, and human-overridable.
 It does not rank products permanently or authorize automatic routing.
 
 ---
@@ -378,6 +379,38 @@ Evidence should be refreshed when:
 - A better existing capability becomes available.
 
 The platform does not require one universal AI score.
+
+---
+
+## Practical Maturity Path
+
+Evolve the existing operating model through use:
+
+    documented task profiles
+    -> evidence-backed advisory recommendations
+    -> lightweight repeatable evaluations
+    -> real-use outcomes and owner overrides as evidence
+    -> selective automation only if later justified
+
+These are documentation-level practices, not a new formal schema or object.
+Recommendations should explain the relevant environment, model/provider,
+reasoning effort, tools and context, data sensitivity, authority posture,
+validation, cost and latency, and fallback. A human may override a recommendation
+within existing authority and data boundaries; the override does not itself
+expand either boundary.
+
+Keep durable selection principles separate from dated operating guidance.
+Evaluation evidence records what was tested and under which conditions; actual
+outcomes record what happened in use. Recommendations interpret that evidence;
+owner overrides record a distinct decision and its reason when useful. An
+override may motivate reevaluation but is not proof of a better outcome.
+Real-use outcomes and overrides may inform future evaluations with provenance,
+sensitivity, and freshness preserved under Knowledge Authority Architecture.
+
+Use small repeatable comparisons where they resolve a recurring task decision.
+No registry, benchmark service, database, evaluation runtime, or automatic
+routing is introduced. Selective automation remains future work requiring its
+own evidence, design, and explicit authorization.
 
 ---
 

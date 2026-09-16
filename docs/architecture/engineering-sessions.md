@@ -16,7 +16,7 @@ It should begin from the repository.
 
 # Core Principle
 
-Every engineering session should start from a shared, deterministic understanding of the platform.
+Every engineering session should start from a shared, deterministic understanding of its declared repository scope and relevant Platform responsibilities.
 
 Before implementation begins, the session should establish:
 
@@ -34,7 +34,12 @@ This protects the platform from assumption-driven work.
 
 # Relationship to the Repository
 
-The repository is the canonical source of truth for engineering sessions.
+This repository is the canonical source for engineering sessions within its
+assigned root Platform scope. Designated specialized repositories, restricted
+records, external systems, and live systems retain their own responsibilities
+under `docs/architecture/knowledge-authority.md`. The knowledge order below is
+repository-local, not an override of those owners. Access to another source
+requires the applicable task and data authority.
 
 A session should prefer repository knowledge in this order:
 
@@ -63,7 +68,9 @@ Atlas is the deterministic engineering interface for beginning and guiding engin
 
 The implemented startup and inspection interface reports repository metadata
 validity, typed active state and mission context, relevant architecture,
-generated synchronization, documentation gaps, and recommended next action.
+generated synchronization, documentation gaps, and recommended next action
+within this repository. Active state, its mission companion, lifecycle records,
+and Atlas output are not a universal ledger of Platform or domain activity.
 
 Native execution-environment readiness still requires the human/agent
 preflight below. Repository health and Atlas guidance do not establish it.

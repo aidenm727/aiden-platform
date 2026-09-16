@@ -145,13 +145,20 @@ Improves creative practice, experimentation, publishing, music, writing, visual 
 
 ### Repository
 
-The GitHub repository is the canonical engineering knowledge record.
+`aiden-platform` is the root Platform engineering repository for Platform-wide
+architecture, shared capabilities and systems, cross-domain contracts, root
+engineering coordination, and explicitly assigned responsibilities.
 
-It owns architecture, standards, missions, roadmaps, infrastructure records, operations, Repository Objects, and engineering tools.
+Canonical authority is source-scoped. Specialized engineering repositories,
+restricted records, external systems, and live systems may own distinct
+responsibilities under `docs/architecture/repository.md` and
+`docs/architecture/knowledge-authority.md`. Repository-local state is not a
+universal ledger of Platform activity.
 
 ### Atlas
 
-Atlas is the deterministic engineering control plane.
+Atlas is the repository-local deterministic engineering control plane for
+`aiden-platform`; it is not a multi-repository control plane.
 
 Atlas helps humans and AI systems understand repository state, apply engineering contracts, verify changes, and evolve the platform deliberately.
 
@@ -218,6 +225,31 @@ Examples:
 
 ---
 
+## Capability Incubation
+
+Where suitable, begin with natural, manual, or conversational use:
+
+    natural use
+    -> recurring friction and patterns
+    -> actual requirements
+    -> smallest earned deterministic or software capability
+    -> continued use and reevaluation
+
+Chat-first incubation is an explicit operating principle, not a universal
+starting point or an obligation to build software. Observed recurring need
+should earn deterministic state, automation, integrations, specialized UI, or
+software. Adopt software directly when requirements are already clear, retain
+a useful manual workflow, stop an unsuccessful experiment, or use an existing
+external capability instead of rebuilding it. Continued use tests whether the
+benefit still justifies the maintenance burden.
+
+Human-facing names should be simple and functional; add the Platform owner's
+name only when it conveys meaning. This preference does not rename repository,
+schema, machine, environment-variable, persisted-data, Atlas, or historical
+identities.
+
+---
+
 ## Evolution Model
 
 Vision and capability architecture guide system design; roadmaps and
@@ -234,7 +266,7 @@ Engineering Opportunities preserve possibilities.
 
 Roadmaps organize direction.
 
-`docs/current-state.json` owns typed active state. `docs/current-mission.md`
+`docs/current-state.json` owns this repository's typed active state. `docs/current-mission.md`
 is its human-readable companion; machine-readable state wins on conflict.
 Neither record grants permission.
 

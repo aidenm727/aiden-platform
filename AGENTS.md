@@ -28,10 +28,10 @@ of those authorities.
 
 ## State and startup
 
-- GitHub is the canonical documentation source, this repository is the canonical Aiden Platform engineering record, and Atlas is the deterministic engineering interface. Follow `docs/architecture/repository.md`, `docs/architecture/knowledge-authority.md`, `docs/architecture/engineering-sessions.md`, and `docs/standards/engineering-collaboration.md`; reference their canonical owners instead of copying them.
+- GitHub is the canonical documentation source, this repository is the root Platform engineering record for its explicitly assigned scope, and Atlas is its repository-local deterministic engineering interface. Canonical authority is source-scoped; neither this repository nor Atlas is a universal ledger of Platform activity. Follow `docs/architecture/repository.md`, `docs/architecture/knowledge-authority.md`, `docs/architecture/engineering-sessions.md`, and `docs/standards/engineering-collaboration.md`; reference their canonical owners instead of copying them.
 - Before engineering work, run `PYTHONDONTWRITEBYTECODE=1 ./atlas bootstrap` from the repository root. Then verify `git branch --show-current`, `git rev-parse HEAD`, and `git status --short --branch`, and read `docs/current-state.json` plus `docs/current-mission.md`.
 - Treat branch, commit, status, upstream tracking, mission, and Atlas output as live observations. Do not fetch or mutate refs merely to refresh them without explicit authorization.
-- `docs/current-state.json` owns typed active state. `docs/current-mission.md` is its short human-readable companion, and machine-readable state wins on conflict. Missing or invalid canonical state fails closed; Atlas must not fall back to mission prose.
+- `docs/current-state.json` owns this repository's typed active state. `docs/current-mission.md` is its short human-readable companion, and machine-readable state wins on conflict. Missing or invalid canonical state fails closed; Atlas must not fall back to mission prose.
 - Before the first mutation and native verification, complete the repository and
   execution-environment preflight defined in
   `docs/architecture/engineering-sessions.md`.

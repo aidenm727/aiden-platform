@@ -16,7 +16,7 @@ Engineering the platform should feel like working within a coherent operating en
 
 The engineering environment should continuously answer questions such as:
 
-- What is the current state of the platform?
+- What is the current engineering state within this repository's scope?
 - What should I work on next?
 - Is my documentation current?
 - Is my AI context synchronized?
@@ -59,7 +59,10 @@ The engineering environment consists of four primary layers.
 
 ## Canonical Source of Truth
 
-The GitHub repository remains the authoritative source of engineering knowledge.
+The GitHub repository remains authoritative for its assigned root Platform
+engineering responsibilities. Other designated sources retain their scoped
+authority under `docs/architecture/knowledge-authority.md`; repository state
+and Atlas are not a universal ledger of Platform activity.
 
 Architecture documents describe intent.
 
@@ -77,7 +80,9 @@ AI systems assist engineering but never replace canonical documentation.
 
 ## Atlas
 
-Atlas is the deterministic engineering interface for the Aiden Platform.
+Atlas is the repository-local deterministic engineering interface for
+`aiden-platform`. Extraction, generalization, and multi-repository coordination
+are not part of the current operating model.
 
 Atlas should:
 
@@ -136,7 +141,7 @@ Atlas should eventually prepare context for multiple engineering environments in
 - Local AI
 - Future AI assistants
 
-The repository remains the canonical engineering record regardless of which AI systems are used.
+The repository remains canonical for its assigned engineering scope regardless of which AI systems are used.
 
 ---
 
@@ -173,7 +178,7 @@ deferred. The bounded task-context library described in
 `docs/architecture/task-scoped-agent-context-compilation.md` is implemented;
 it does not provide those integrations.
 
-The goal is to reduce the cognitive effort required to begin a new AI-assisted engineering session while preserving the repository as the canonical source of truth.
+The goal is to reduce the cognitive effort required to begin a new AI-assisted engineering session while preserving source-scoped canonical ownership.
 
 ## Design Principles
 

@@ -2,7 +2,10 @@
 
 ## Purpose
 
-This document is the recommended navigation starting point for the Aiden Platform repository.
+This document is the navigation starting point for the root Platform engineering
+repository and its assigned scope. `docs/architecture/repository.md` defines
+selective specialized ownership; `docs/architecture/knowledge-authority.md`
+defines source-scoped authority.
 
 ```text
 Why it exists
@@ -96,7 +99,7 @@ Repository Objects and engineering tools support these layers.
 
 ## Canonical Active State
 
-- `docs/current-state.json` — Strict typed record for current phase, work
+- `docs/current-state.json` — Strict typed record for this repository's current phase, work
   selection, concerns, pending owner decision, evidence freshness, and fixed
   external-authority sentinels.
 
@@ -113,10 +116,11 @@ Repository Objects and engineering tools support these layers.
 - `docs/infrastructure-snapshot.md`
 
 These public owners contain role-based patterns and dated, non-continuous
-evidence. Exact inventory, addressing, private DNS, configuration, destinations,
-recovery procedures, and live evidence belong to a future private operations
-record only when those artifacts need version control. Secret values never
-belong in Git.
+evidence. Repository Architecture owns the accepted Homelab specialized boundary
+and the requirement to separately design a restricted source for exact
+non-secret desired state when a concrete durable operational artifact is
+identified. No extraction or migration is implied. Live systems and fresh
+observation own current reality; secret values never belong in Git.
 
 ## Operations
 
@@ -133,6 +137,8 @@ belong in Git.
 - `docs/roadmaps/engineering-toolkit.md`
 
 ## Portfolio Reviews
+
+- `docs/reviews/platform-operating-model-recalibration-r1-evidence-2026-09-15.md` — Dated non-canonical Tier-3 September recalibration evidence, including the authorized baseline verification exception; distinct from the historical repository-identity R1.
 
 - `docs/reviews/school-learning-refresh-transport-packaging-evidence-2026-09-06.md` — Dated non-canonical Tier-3 evidence preserving design, implementation/corrections, independent review, owner acceptance, substantive publication, and the refresh-packaging boundary.
 - `docs/reviews/ai-operating-environment-refresh-2026-09-06.md` — Dated non-canonical September operating profile and Tier-3 documentation/ownership reconciliation evidence preserving verification, review, owner acceptance, and publication chronology.
@@ -286,7 +292,8 @@ Roadmaps describe direction.
 
 Generated context remains derived.
 
-`docs/current-state.json` owns typed active state. `docs/current-mission.md`
+`docs/current-state.json` owns this repository's typed active state; neither it nor
+Atlas is a universal ledger of Platform activity. `docs/current-mission.md`
 provides the compatible human companion. `AGENTS.md` is the primary
 repository-local authority-interpretation contract. None of these sources
 creates current-session permission.

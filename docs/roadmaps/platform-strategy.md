@@ -8,7 +8,31 @@ Architecture owns durable design.
 
 This roadmap owns strategic timing and priority.
 
-Current Mission owns active engineering work.
+Typed active state and its Current Mission companion describe this repository's
+engineering state, not all Platform activity. They grant no action authority.
+
+---
+
+## September 2026 Operating Direction
+
+The accepted recalibration applies the capability-incubation principle in
+`docs/architecture/platform.md`: start with natural use where suitable, identify
+recurring need, and build only the smallest earned capability. Existing
+software, external capabilities, continued manual use, and ending an experiment
+remain valid outcomes.
+
+`docs/architecture/repository.md` owns selective specialized-repository
+boundaries. Homelab is the first accepted candidate; extraction, migration, and
+repository creation remain separately designed and authorized future work.
+Restricted non-secret desired operational state also requires a concrete
+durable artifact and a separately designed source. Atlas remains local to
+`aiden-platform`.
+
+AI/tool selection evolves through the advisory maturity path owned by
+`docs/architecture/ai-operating-model.md`. This direction creates no evaluation
+runtime or automatic routing. The dated July sequence below remains historical
+accepted direction, not current implementation authority or a claim that its
+outcome gates are all unfinished.
 
 ---
 
