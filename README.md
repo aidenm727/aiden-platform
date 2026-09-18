@@ -187,11 +187,11 @@ extraction, restricted operational source, and migrations remain future work.
 Local AI, broader knowledge sovereignty, additional recovery proof, and an
 automatic coordination runtime are also future or conditional work.
 
-The [canonical state](docs/current-state.json) preserves W2 / Workflow v1.2 as
-the published phase and selects R2 — Sahale Repository Architecture Refresh.
-R2 is a local architecture candidate, with owner acceptance and publication as
-separate later gates. It changes no machine identity. The canonical GitHub
-repository remains `aidenm727/aiden-platform`; the existing local checkout,
+The [canonical state](docs/current-state.json) records R2 — Sahale Repository
+Architecture Refresh as owner-accepted, published, and complete at
+`b8d5b9ea0ccc7f6084c723f96a3c79382abf6d62`. Work selection is intentionally
+idle; no next checkpoint is selected. R2 changed no machine identity. The
+canonical GitHub repository remains `aidenm727/aiden-platform`; the existing local checkout,
 compiler identity, schemas, environment variables, persisted data, compatibility
 references, and historical evidence retain their identities.
 

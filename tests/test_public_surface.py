@@ -606,24 +606,29 @@ class PublicSurfaceTests(unittest.TestCase):
                 missing.append(target)
         self.assertEqual(missing, [])
 
-    def test_active_state_preserves_published_school_learning_and_selects_r2(self) -> None:
+    def test_active_state_preserves_published_school_learning_and_completed_r2(self) -> None:
         state = json.loads(self.text["docs/current-state.json"])
-        self.assertEqual(state["phase"]["id"], "engineering-workflow-v1-2")
+        self.assertEqual(state["phase"]["id"], "sahale-r2-architecture-refresh")
         self.assertEqual(state["phase"]["lifecycle"], "published")
-        self.assertEqual(state["work_selection"]["status"], "selected")
-        checkpoint = state["work_selection"]["selected_checkpoint"]
-        self.assertEqual(checkpoint["id"], "sahale-r2-architecture-refresh")
-        self.assertEqual(checkpoint["name"], "R2 — Sahale Repository Architecture Refresh")
-        self.assertEqual(checkpoint["lifecycle"], "selected")
-        self.assertEqual(checkpoint["effective_date"], "2026-09-18")
-        self.assertEqual(checkpoint["evidence_refs"], [])
-        self.assertEqual(state["decision_required"]["id"], "accept-sahale-r2-candidate")
+        self.assertEqual(state["phase"]["evidence_refs"], ["sahale-r2-publication"])
+        self.assertEqual(state["work_selection"]["status"], "intentional_idle")
+        self.assertIsNone(state["work_selection"]["selected_checkpoint"])
+        self.assertEqual(state["decision_required"]["id"], "select-future-work")
         self.assertEqual(
             state["decision_required"]["summary"],
-            "Owner acceptance of the exact verified and independently reviewed R2 candidate; publication remains separately unauthorized.",
+            "Owner selection of future work; no checkpoint or later capability is preselected.",
         )
         self.assertEqual(state["decision_required"]["status"], "pending")
         self.assertEqual(state["decision_required"]["evidence_refs"], [])
+        self.assertIn(
+            {
+                "id": "sahale-r2-publication",
+                "path": "docs/reviews/sahale-r2-architecture-refresh-evidence-2026-09-18.md",
+                "relation": "records_phase",
+                "commit": "b8d5b9ea0ccc7f6084c723f96a3c79382abf6d62",
+            },
+            state["evidence_links"],
+        )
         self.assertEqual(state["blockers"], [])
         self.assertEqual(state["unknowns"], [])
         self.assertEqual(state["freshness"]["effective_date"], "2026-09-18")
@@ -656,10 +661,12 @@ class PublicSurfaceTests(unittest.TestCase):
         self.assertNotIn("SL2-A is selected implementation work", mission)
         self.assertRegex(mission, r"final\s+independent Tier-2 review with no BLOCKING, MATERIAL, or MINOR findings")
         self.assertIn("School Learning Operational Loop lifecycle: Owner-accepted, published, and\n  complete at `00805e67057fcd68e9ea465749a2c8a1df2cd7f7`; not active selected\n  work.", mission)
-        self.assertIn("Owner acceptance of the exact verified and independently reviewed R2 candidate;", mission)
+        self.assertIn("Owner selection of future work; no checkpoint or later capability is", mission)
         self.assertIn("S1, F2, F3, SL2-B", mission)
         self.assertIn("remain unselected", mission)
-        self.assertIn("Status: Selected", mission)
+        self.assertIn("Status: Intentional idle", mission)
+        self.assertRegex(mission, r"R2 — Sahale Repository Architecture Refresh is owner-accepted, published, and\s+complete at `b8d5b9ea0ccc7f6084c723f96a3c79382abf6d62`")
+        self.assertIn("not selected or authorized by this synchronization", mission)
         self.assertRegex(mission, r"No deployment, live-data\s+migration, Canvas/Gmail/Calendar integration, or operational-runtime state is\s+established\.")
         self.assertIsNotNone(definition_for("docs/reviews/school-learning-v0-2-a-semester-core-intake-evidence-2026-08-26.md"))
 
@@ -924,7 +931,7 @@ SELF_PRIVACY_DISPOSITIONS = {
     (
         "historical_host",
         "test_renamed_documents_and_evidence_are_registered",
-        669,
+        676,
         "28417f2fb39f8b22a594692ee92a59b717cc74570eefcf1d117be17937933163",
     ): 1,
     (

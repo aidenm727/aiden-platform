@@ -6,7 +6,7 @@ the two disagree.
 
 ## Phase
 
-W2 — Engineering Workflow v1.2 — Published
+R2 — Sahale Repository Architecture Refresh — Published
 
 ## Active State
 
@@ -24,9 +24,18 @@ synchronization. The School Learning Operational Loop passed its final
 independent Tier-2 review with no BLOCKING, MATERIAL, or MINOR findings, is
 owner-accepted, and is published and complete at
 `00805e67057fcd68e9ea465749a2c8a1df2cd7f7`. Publication completed on
-2026-08-31. The owner has now selected and authorized R2 — Sahale Repository
-Architecture Refresh under the accepted N0/N1 architecture. R2 is an
-uncommitted local candidate, not owner-accepted or published.
+2026-08-31.
+
+R2 — Sahale Repository Architecture Refresh is owner-accepted, published, and
+complete at `b8d5b9ea0ccc7f6084c723f96a3c79382abf6d62`
+(`docs: refresh Sahale architecture for R2`). The owner accepted the exact
+independently reviewed candidate with fingerprint
+`9a05e56ed478908812e7b144c1bdc55c506abebb68dfbffa6bf33e2c4e3c2a54`,
+then separately authorized its one commit and non-force publication to canonical
+main. Publication succeeded on 2026-09-18. At lifecycle-synchronization startup,
+local HEAD, origin/main and freshly observed remote main all matched that commit.
+R2 no longer awaits candidate acceptance or publication and is no longer active
+selected implementation work. Repository work selection is intentionally idle.
 
 Canonical state effective date: 2026-09-18.
 
@@ -43,16 +52,18 @@ gate remains open. No School runtime or storage change is selected here.
 
 Preserve published W2, historical W1, completed R1, G14, SL2-A, and the School Learning
 Operational Loop, human authority, generated ownership, and all public/private
-boundaries during the bounded R2 architecture refresh. No deployment, live-data
-migration, Canvas/Gmail/Calendar integration, or operational-runtime state is
+boundaries after completed R2 while the owner selects future work.
+No deployment, live-data migration, Canvas/Gmail/Calendar integration, or operational-runtime state is
 established.
 
 ## Work Selection
 
-- Status: Selected.
-- Selected checkpoint: R2 — Sahale Repository Architecture Refresh.
-- R2 boundary: Architecture refresh only; local implementation authorized,
-  candidate acceptance required, no publication or deployment authority.
+- Status: Intentional idle.
+- Selected checkpoint: None.
+- R2 lifecycle: Owner-accepted, published, and complete at
+  `b8d5b9ea0ccc7f6084c723f96a3c79382abf6d62`; not active selected work.
+- I0 — Sahale Identity Migration Design: Intended next engineering direction
+  only; not selected or authorized by this synchronization.
 - G14 lifecycle: Owner-accepted, published, and complete; not active selected
   work. Deployment, live collection, and operational runtime are not claimed.
 - W2 lifecycle: Published repository workflow; not active selected work.
@@ -69,7 +80,7 @@ established.
 
 ## Next Milestone
 
-R2 — Sahale Repository Architecture Refresh
+Intentional idle — no engineering checkpoint is selected.
 
 ## Blockers
 
@@ -81,9 +92,13 @@ None recorded in canonical active state.
 
 ## Owner Decision Required
 
-Owner acceptance of the exact verified and independently reviewed R2 candidate;
-publication remains separately unauthorized. S1, F2, F3, SL2-B, and all other
+Owner selection of future work; no checkpoint or later capability is
+preselected. I0 remains intended direction only. S1, F2, F3, SL2-B, and all other
 future implementation checkpoints remain unselected.
+
+This local lifecycle-synchronization candidate requires its own owner acceptance
+and separate publication authority. That gate applies to this follow-up change,
+not to the already accepted and published R2 architecture candidate.
 
 ## R2 Architecture and Identity Boundary
 
@@ -116,10 +131,15 @@ requires explicit owner authority outside repository state and Atlas.
 
 ## Evidence and History
 
-- `docs/reviews/sahale-r2-architecture-refresh-evidence-2026-09-18.md` — local
-  uncommitted Tier-3 R2 evidence and review boundary. The selected checkpoint's
-  typed evidence refs remain empty because the schema requires immutable
-  commit-backed links; no R2 commit is invented and no schema change is made.
+- `docs/reviews/sahale-r2-architecture-refresh-evidence-2026-09-18.md` at
+  `b8d5b9ea0ccc7f6084c723f96a3c79382abf6d62` — immutable R2 implementation
+  and pre-publication evidence. Its uncommitted/unaccepted/unpublished wording
+  describes the historical candidate boundary, not the current R2 lifecycle.
+  Owner acceptance and completed publication are attested above; the historical
+  record is preserved unchanged.
+- `docs/reviews/sahale-r2-lifecycle-synchronization-evidence-2026-09-18.md` —
+  local follow-up lifecycle evidence and verification/acceptance boundary.
+  This uncommitted synchronization record is not given a fabricated commit link.
 
 - `docs/reviews/engineering-workflow-v1-2-evidence-2026-09-16.md` — W2
   implementation evidence at `d40c2891bd5cf79f674498ac6b5fed6bb1beac47`.
