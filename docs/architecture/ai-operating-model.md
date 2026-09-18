@@ -2,7 +2,7 @@
 
 ## Purpose
 
-The AI Operating Model defines how the Aiden Platform selects and uses artificial intelligence for a specific task or recurring workflow.
+The AI Operating Model defines how Sahale selects and uses artificial intelligence for a specific task or recurring workflow.
 
 Its purpose is to translate durable Artificial Intelligence Architecture into practical, provider-independent, evidence-backed operating decisions.
 
@@ -34,7 +34,7 @@ It should not begin with a favored provider, model release, benchmark, or produc
 
 ## Architectural Ownership
 
-`docs/architecture/ai.md` owns durable Artificial Intelligence and Personal AI architecture.
+`docs/architecture/ai.md` owns durable Artificial Intelligence architecture.
 
 This document owns recurring operational decisions about:
 
@@ -319,6 +319,14 @@ remain deferred.
 
 ---
 
+The broader intended context-resolution flow is owned by
+`docs/architecture/context-coordination.md`. Semantic planning may propose
+relevant context categories; deterministic source contracts control authority,
+sensitivity, freshness, and bounded projections. That future relationship does
+not change the implemented compiler or authorize automatic retrieval, model
+routing, or action. Interaction and incubation boundaries remain owned by
+`docs/architecture/platform.md`.
+
 ## Action and Approval Rules
 
 AI use should preserve the action boundary defined in `docs/architecture/ai.md`.
@@ -434,11 +442,12 @@ Repeated failures should become evaluation evidence or an Engineering Opportunit
 
 ---
 
-## Personal AI Boundary
+## AI Consumer Boundary
 
-Personal AI may consume this operating model when selecting or recommending an AI arrangement.
+AI consumers and any future Sahale coordination system apply this operating
+model when selecting or recommending an AI arrangement.
 
-Personal AI must not:
+AI consumers must not:
 
 - Rewrite the operating model conversationally.
 - Treat provider preference as permanent architecture.
@@ -447,7 +456,8 @@ Personal AI must not:
 - Expand action authority silently.
 - Depend on automatic routing before that capability is designed and approved.
 
-Personal AI implementation remains deferred.
+Coordination and automatic model routing remain deferred; this boundary does
+not introduce a separately named Personal AI product.
 
 ---
 
@@ -491,11 +501,12 @@ Before adopting an AI arrangement, answer:
 
 ## Canonical Relationships
 
-- `docs/architecture/ai.md` owns durable AI and Personal AI architecture.
+- `docs/architecture/ai.md` owns durable AI architecture.
 - `docs/architecture/knowledge-authority.md` owns knowledge authority and promotion.
 - `docs/vision.md` owns human authority and durable platform principles.
 - `docs/architecture/capabilities.md` owns capability identity.
 - `docs/roadmaps/platform-strategy.md` owns strategic sequencing.
 - `docs/current-state.json` owns typed active state; `docs/current-mission.md` is its human-readable companion.
 - EO-2026-008 preserves the strategic AI Engineering Excellence direction.
-- EO-2026-009 preserves the Personal AI Platform direction.
+- EO-2026-009 preserves the historical Personal AI Platform direction; the
+  object is not renamed or advanced by this architecture refresh.

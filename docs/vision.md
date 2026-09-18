@@ -1,12 +1,15 @@
-# Aiden Platform Vision
+# Sahale Vision
 
 ## Purpose
 
-The Aiden Platform is a long-term personal capability platform for increasing the owner's freedom and agency.
+Sahale is a long-term personal capability platform for increasing the owner's freedom and agency.
 
 Its purpose is to increase the owner's ability to understand, learn, build, create, organize, decide, operate, and pursue meaningful goals through intentionally engineered systems.
 
-The platform is not a single application, server, assistant, repository, or homelab.
+Sahale is the human-facing identity of the personal capability platform. It is
+not ChatGPT, one repository, the Homelab, one database, one model, or one
+execution environment. ChatGPT is currently a primary interaction and
+capability-incubation environment for Sahale.
 
 It is an evolving capability environment that combines engineering, knowledge, artificial intelligence, automation, infrastructure, and human-centered systems to increase agency over time.
 
@@ -20,7 +23,7 @@ Agency is the outcome.
 
 ## North Star
 
-By July 2031, the Aiden Platform should be a durable personal capability environment that:
+By July 2031, Sahale should be a durable personal capability environment that:
 
 - Helps the owner understand complex subjects and remain current.
 - Helps the owner build software, AI systems, infrastructure, and useful physical systems.
@@ -123,7 +126,7 @@ It should not pretend to make them unnecessary.
 
 ## Platform Non-Goals
 
-The Aiden Platform is not intended to become:
+Sahale is not intended to become:
 
 - An autonomous system that manages the owner's life.
 - A single monolithic assistant.
@@ -148,11 +151,14 @@ The platform should establish canonical direction, a bounded engineering platfor
 
 ### July 2029 — Integration and Leverage
 
-The platform should demonstrate a real Personal AI subsystem, an early coherent AidenOS experience, practical hybrid AI, bounded agentic engineering, professional leverage, economic experiments, and dependable infrastructure.
+The platform should demonstrate useful shared AI and context capabilities,
+practical hybrid AI, bounded agentic engineering, professional leverage,
+economic experiments, and dependable infrastructure. A coherent Sahale UI
+remains conditional on useful capabilities for it to expose.
 
 ### July 2031 — Durable Agency and Optionality
 
-The platform should provide reusable foundations across human domains, strong professional and economic choices, powerful but bounded Personal AI, compounding knowledge, useful digital and physical engineering, and continued understandability.
+The platform should provide reusable foundations across human domains, strong professional and economic choices, powerful but bounded AI assistance, compounding knowledge, useful digital and physical engineering, and continued understandability.
 
 Dated sequencing and strategic initiatives belong in `docs/roadmaps/platform-strategy.md`.
 
@@ -160,7 +166,7 @@ Dated sequencing and strategic initiatives belong in `docs/roadmaps/platform-str
 
 ## Vision Test
 
-A proposed improvement belongs in the Aiden Platform when it can answer:
+A proposed improvement belongs in Sahale when it can answer:
 
 1. Which durable capability improves?
 2. How does it increase agency?
@@ -176,10 +182,10 @@ A proposal that cannot answer these questions should remain an experiment or be 
 
 ## Canonical Relationships
 
-This document owns why the Aiden Platform exists and where it is going.
+This document owns why Sahale exists and where it is going.
 
 - `docs/architecture/platform.md` defines platform structure.
 - `docs/architecture/capabilities.md` defines the capability taxonomy.
-- `docs/architecture/ai.md` defines AI and Personal AI architecture.
+- `docs/architecture/ai.md` defines AI architecture.
 - `docs/roadmaps/platform-strategy.md` defines dated strategic sequencing.
 - `docs/current-state.json` owns typed active state; `docs/current-mission.md` is its human-readable companion.

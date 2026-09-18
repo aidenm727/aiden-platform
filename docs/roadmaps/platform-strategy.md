@@ -1,8 +1,8 @@
-# Aiden Platform Strategy Roadmap
+# Sahale Strategy Roadmap
 
 ## Purpose
 
-This roadmap translates the Aiden Platform Vision into dated outcomes and coordinated initiatives.
+This roadmap translates the Sahale Vision into dated outcomes and coordinated initiatives.
 
 Architecture owns durable design.
 
@@ -13,7 +13,13 @@ engineering state, not all Platform activity. They grant no action authority.
 
 ---
 
-## September 2026 Operating Direction
+## September 2026 Sahale Direction
+
+Sahale is the human-facing personal capability platform identity. R2 records
+the accepted N0/N1 direction while retaining all current machine identities.
+`docs/architecture/context-coordination.md` owns the intended automatic bounded
+context-resolution responsibility above the existing deterministic compiler.
+It requires neither centralization nor a new top-level foundation.
 
 The accepted recalibration applies the capability-incubation principle in
 `docs/architecture/platform.md`: start with natural use where suitable, identify
@@ -54,8 +60,8 @@ Expected outcomes:
 
 Expected outcomes:
 
-- Personal AI operates as a real shared subsystem.
-- AidenOS provides an early coherent experience.
+- Shared AI and context capabilities provide recurring cross-domain value.
+- A coherent Sahale UI is considered only when useful capabilities justify it.
 - Hosted and local AI have practical roles.
 - Bounded agentic engineering is useful and reviewable.
 - Career capability creates professional leverage.
@@ -68,7 +74,7 @@ Expected outcomes:
 
 - Shared foundations support multiple human domains.
 - The owner has strong professional and economic choices.
-- Personal AI is powerful but bounded.
+- AI assistance is powerful but bounded.
 - Knowledge compounds across years.
 - Digital and physical engineering converge where useful.
 - The platform remains understandable, portable, and maintainable.
@@ -91,9 +97,9 @@ Outcomes include clear ownership, reconciled architecture and roadmaps, a bounde
 
 Guardrail: Atlas gains capabilities only when real engineering work improves.
 
-## 3. AI Operating Model and Personal AI Architecture
+## 3. AI Operating Model and Context Coordination
 
-Define model selection, data sensitivity, hosted and local roles, provider evaluation, context ownership, approval rules, provenance, portability, and the Personal AI boundary.
+Define model selection, data sensitivity, hosted and local roles, provider evaluation, context ownership, approval rules, provenance, portability, and bounded cross-source coordination responsibilities.
 
 Guardrail: do not build automatic routing or large local infrastructure before recurring use cases justify them.
 
@@ -101,7 +107,7 @@ Guardrail: do not build automatic routing or large local infrastructure before r
 
 Create an owned system for capturing, organizing, retrieving, studying, and applying useful knowledge beyond repository engineering.
 
-Initial subjects include AI engineering, agentic systems, career research, Aiden Platform architecture, nutrition, finance, and multidisciplinary engineering.
+Initial subjects include AI engineering, agentic systems, career research, Sahale architecture, nutrition, finance, and multidisciplinary engineering.
 
 Guardrail: curate useful knowledge instead of ingesting everything.
 
@@ -130,6 +136,10 @@ Guardrail: start with workflow and information design, then automate stable part
 ## Sequencing
 
 ### Accepted 90-Day Direction — July 20, 2026
+
+This dated sequence is preserved as historical direction. Its hub proposal does
+not override the current deferral of a dedicated Sahale UI; current work is
+selected only through the owner and repository-local active state.
 
 The next 90 days prioritize release conversion, human operability, and repeated direct use while preserving the existing engineering foundation.
 
@@ -189,7 +199,7 @@ Sequential dependency:
 ```text
 Platform identity
   -> Capability architecture
-  -> Personal AI boundary
+  -> AI and context authority boundaries
   -> Shared knowledge foundation
   -> Integrated personal pilots
 ```
@@ -206,7 +216,9 @@ May run in parallel:
 
 ## Deliberate Deferrals
 
-- Full AidenOS interface.
+- Dedicated Sahale UI until useful capabilities exist for it to expose.
+- Coordination runtime, automatic cross-domain retrieval and context routing.
+- Repository/checkout identity migration and Homelab repository extraction.
 - Autonomous multi-agent engineering.
 - Large local-AI hardware purchases.
 - Automatic model routing.

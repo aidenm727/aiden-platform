@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Knowledge Authority defines how the Aiden Platform distinguishes information classes, identifies canonical ownership, preserves provenance, resolves conflict, and deliberately promotes useful findings into authoritative knowledge.
+Knowledge Authority defines how Sahale distinguishes information classes, identifies canonical ownership, preserves provenance, resolves conflict, and deliberately promotes useful findings into authoritative knowledge.
 
 Its purpose is to prevent temporary conversation, generated context, AI output, execution evidence, and candidate findings from silently acquiring authority.
 
@@ -37,7 +37,7 @@ This document owns:
 - Acceptance, rejection, and deferral.
 - Conflict handling.
 - Historical traceability.
-- Personal AI consumption boundaries.
+- AI context-consumption boundaries.
 
 `docs/architecture/ai-operating-model.md` owns AI selection and operating decisions.
 
@@ -62,8 +62,9 @@ Every important item should be understood by authority class and owner.
 
 Canonical authority is source-scoped, not physically centralized. A designated
 owner may be this root repository, a specialized engineering repository, a
-restricted operational record, an external system, or a live system. Location
-alone grants neither knowledge authority nor permission to act. One explicit
+restricted operational record, structured domain state, an external service/API,
+a live system, supplied source evidence, or another explicitly designated source.
+Location alone grants neither knowledge authority nor permission to act. One explicit
 owner remains responsible for each durable fact or responsibility; references
 must preserve that owner's scope, provenance, sensitivity, and freshness.
 
@@ -75,6 +76,20 @@ Git; live systems and fresh observation own current operational reality.
 Repository-local state and Atlas do not summarize all Platform activity.
 
 ---
+
+## Coordination and Source Contracts
+
+`docs/architecture/context-coordination.md` applies this authority model to
+bounded resolution across distributed sources. Semantic relevance proposed by
+AI does not establish ownership. Deterministic metadata and designated source
+contracts govern authority and permitted retrieval; generated context carries
+provenance without becoming its owner. Automatic retrieval, if later
+implemented and authorized, would not grant action authority.
+
+Conversation, memory, Project sources, generated summaries, and compiled context
+can be useful without becoming canonical merely because they are available.
+An orientation source may point to owners without copying or replacing them.
+No universal personal database or central ingestion requirement follows.
 
 ## Knowledge and Evidence Classes
 
@@ -235,6 +250,7 @@ Examples:
 - Platform structure -> `docs/architecture/platform.md`.
 - Capability identity -> `docs/architecture/capabilities.md`.
 - AI architecture -> `docs/architecture/ai.md`.
+- Cross-source context coordination -> `docs/architecture/context-coordination.md`.
 - AI operating rules -> `docs/architecture/ai-operating-model.md`.
 - Knowledge authority -> this document.
 - This repository's typed active state -> `docs/current-state.json`; human-readable companion -> `docs/current-mission.md`.
@@ -450,11 +466,11 @@ An AI system should not choose silently between conflicting sources.
 
 ---
 
-## Personal AI Consumption Rules
+## AI Context Consumption Rules
 
-Personal AI may consume canonical knowledge, generated context, personal context, source records, execution records, and candidate findings.
+AI consumers may consume canonical knowledge, generated context, personal context, source records, execution records, and candidate findings.
 
-It must:
+They must:
 
 - Preserve authority labels.
 - Expose important provenance.
@@ -465,7 +481,7 @@ It must:
 - Prefer canonical owners for durable platform facts.
 - Request review before promotion.
 
-Personal AI must not:
+AI consumers must not:
 
 - Treat memory as canonical automatically.
 - Present generated context as the source of truth.
@@ -516,7 +532,7 @@ It does not require:
 - Autonomous conflict resolution.
 - A new Repository Object type.
 - Permanent storage of every conversation.
-- Personal AI implementation.
+- A separately named Personal AI implementation.
 
 Manual use should establish the correct records and boundaries before automation.
 

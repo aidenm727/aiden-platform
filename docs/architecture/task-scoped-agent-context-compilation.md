@@ -12,6 +12,21 @@ materialization, validation, digest, and compiler modules with native tests.
 The architecture remains the canonical contract; implementation does not imply
 a general public CLI, autonomous authority, or production-service status.
 
+## Relationship to Sahale Coordination
+
+`docs/architecture/context-coordination.md` owns the broader cross-cutting
+coordination responsibility. It may eventually provide semantic task/context
+planning above this deterministic primitive. AI may propose relevant context
+categories; deterministic source metadata, authority contracts, and selection
+policies decide authoritative source material. The model must not independently
+choose its own authoritative context.
+
+This implemented library continues to produce bounded, provenance-aware,
+validated, generated, non-canonical task context. Broader coordination does not
+replace it, expand its current
+repository-source boundary, or alter machine identity, schemas, selection, or
+compiler provenance. A cross-source runtime and adapters remain deferred.
+
 ## Implementation Status
 
 The original architecture checkpoint predated executable implementation. The

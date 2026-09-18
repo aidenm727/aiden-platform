@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines the durable capability taxonomy of the Aiden Platform.
+This document defines the durable capability taxonomy of Sahale.
 
 A capability is something the platform should be able to do independently of the specific tool, service, provider, model, or hardware used to implement it.
 
@@ -40,7 +40,7 @@ Owns documentation, personal knowledge, provenance, research sources, retrieval,
 
 ### `artificial-intelligence`
 
-Owns model evaluation, hosted and local AI, Personal AI, context use, bounded agents, evidence, and provider portability.
+Owns model evaluation, hosted and local AI, context use, bounded agents, evidence, and provider portability.
 
 ### `automation-integration`
 
@@ -56,7 +56,7 @@ Owns identity, access, secrets, privacy, data classification, encryption, incide
 
 ### `interaction-experience`
 
-Owns AidenOS, dashboards, conversations, search, briefings, notifications, mobile and desktop surfaces, and review interfaces.
+Owns human-facing workspaces, a future Sahale UI, dashboards, conversations, search, briefings, notifications, mobile and desktop surfaces, and review interfaces.
 
 ---
 
@@ -128,18 +128,28 @@ A career intelligence workflow may use:
 
 | Concept | Architectural Position |
 | --- | --- |
-| Aiden Platform | Entire capability ecosystem |
+| Sahale | Entire capability ecosystem |
 | Atlas | Engineering and Evolution system |
 | GitHub repository | Canonical engineering knowledge implementation |
-| Personal AI | Cross-cutting AI system |
-| AidenOS | Interaction and Experience system |
-| Homelab | Infrastructure implementation |
+| Sahale coordination | Cross-cutting responsibility; future runtime, using existing foundations |
+| Future Sahale UI | Deferred Interaction and Experience surface |
+| Homelab | Specialized infrastructure system with workspace, source/domain, and execution-environment roles |
 | Laptop and WSL | Engineering and infrastructure implementation |
 | Immich and Vaultwarden | Services supporting human domains |
-| ChatGPT Project | Hosted AI and context interface |
+| ChatGPT Project | Interaction/context environment for workspaces and capability incubation; not a canonical knowledge boundary |
 | Local model runtime | AI and infrastructure implementation |
 
 ---
+
+Coordination composes existing foundations; it adds no top-level capability ID.
+Knowledge and Context owns source/context responsibilities, AI assists semantic
+planning, Automation and Integration owns future adapters and bounded execution,
+and Interaction and Experience owns the human-facing surfaces. See
+`docs/architecture/context-coordination.md` for the coordination contract and
+`docs/architecture/platform.md` for incubation and Homelab ownership.
+
+Personal AI and AidenOS remain historical framing where explicitly identified.
+Their former system labels do not require replacement products or runtimes.
 
 ## Legacy Capability Compatibility
 
@@ -206,11 +216,11 @@ Deeply integrated, reusable across systems, and improves other capabilities.
 | Platform Direction and Governance | Level 1 | Vision and governance are becoming canonical. |
 | Engineering and Evolution | Level 2 | Atlas and repository workflows are operational; consolidation remains. |
 | Knowledge and Context | Level 2 | Engineering knowledge is strong; broader personal knowledge is early. |
-| Artificial Intelligence | Level 1 | Hosted workflows are useful; operating rules and Personal AI remain early. |
+| Artificial Intelligence | Level 1 | Hosted workflows are useful; broader coordination remains architectural. |
 | Automation and Integration | Level 2 | Infrastructure and context automation exist; cross-domain integration is limited. |
 | Infrastructure and Operations | Level 2 | Core environments operate; storage and recovery continue to mature. |
 | Security, Privacy, and Resilience | Level 2 | Strong practices exist; explicit platform-wide governance is incomplete. |
-| Interaction and Experience | Level 0 | AidenOS is conceptual rather than operational. |
+| Interaction and Experience | Level 1 | Conversational workspaces support use; a dedicated Sahale UI remains deferred. |
 | Learning and Research | Level 1 | Assisted learning exists; durable workflows are not integrated. |
 | Health and Wellbeing | Level 1 | Repeated assisted workflows exist; no platform capability is established. |
 | Economic Agency | Level 1 | Career and finance planning occur; no integrated system exists. |
@@ -239,6 +249,6 @@ A service should not be added only because it is interesting.
 
 - `docs/vision.md` defines why these capabilities matter.
 - `docs/architecture/platform.md` defines their structural relationship.
-- `docs/architecture/ai.md` defines Artificial Intelligence and Personal AI.
+- `docs/architecture/ai.md` defines Artificial Intelligence.
 - `docs/roadmaps/platform-strategy.md` defines sequencing.
 - Engineering Opportunity Capability Alignment should consume this taxonomy through explicit compatibility rules.

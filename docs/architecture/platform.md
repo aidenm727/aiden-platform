@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document defines the structural architecture of the Aiden Platform.
+This document defines the structural architecture of Sahale.
 
 The platform is an ecosystem of shared foundations and human agency domains.
 
@@ -17,7 +17,7 @@ The platform's purpose and durable principles are defined in `docs/vision.md`.
 ## Architectural Model
 
 ```text
-Aiden Platform
+Sahale
 |
 |-- Platform Foundations
 |   |-- Platform Direction and Governance
@@ -71,7 +71,7 @@ Knowledge and Context makes information understandable and usable.
 
 Uses AI deliberately to improve reasoning, learning, engineering, creation, planning, research, and decision support.
 
-Responsibilities include model evaluation, hosted and local AI, provider portability, Personal AI, context use, bounded agents, evidence, human approval boundaries, and sensitive-data handling.
+Responsibilities include model evaluation, hosted and local AI, provider portability, context use, bounded agents, evidence, human approval boundaries, and sensitive-data handling.
 
 AI is cross-cutting.
 
@@ -107,7 +107,9 @@ Exposes platform capabilities through understandable and useful human interfaces
 
 Responsibilities include web, desktop, mobile, conversation, voice where useful, dashboards, search, notifications, briefings, engineering interfaces, accessibility, review, and approval surfaces.
 
-AidenOS belongs within this foundation.
+A future Sahale UI belongs within this foundation and remains deferred until
+useful capabilities exist for it to expose. The earlier AidenOS presentation
+concept is not a required product or runtime.
 
 ---
 
@@ -164,27 +166,69 @@ Atlas helps humans and AI systems understand repository state, apply engineering
 
 Atlas is not the general personal assistant.
 
-### Personal AI
+### Sahale Coordination
 
-Personal AI is the cross-cutting intelligence subsystem built from Artificial Intelligence, Knowledge and Context, Automation and Integration, Security, and Interaction capabilities.
+Sahale has a cross-cutting coordination responsibility spanning Knowledge and
+Context, AI, Automation and Integration, and Interaction and Experience. It is
+not an additional Platform Foundation. Its intended direction is automatic,
+bounded context resolution across distributed authoritative sources, not
+centralization of their knowledge or authority.
 
-It may support engineering and everyday life through shared knowledge, context, reasoning, learning, planning, and bounded action.
+`docs/architecture/context-coordination.md` owns this responsibility and its
+relationship to existing task-scoped deterministic compilation. A coordination
+runtime remains deferred. The earlier Personal AI subsystem framing does not
+require a separately named product; its useful responsibilities belong to the
+existing foundations.
 
-Personal AI is not one model and is not synonymous with AidenOS.
+### Interaction Workspaces
 
-### AidenOS
+The interaction model distinguishes:
 
-AidenOS is the evolving interaction and experience environment through which the owner accesses, coordinates, and understands platform capabilities.
+    conversation
+    -> persistent workspace
+    -> Project/context environment
+    -> durable capability/system
 
-It may include dashboards, conversations, search, briefings, notifications, engineering interfaces, and domain workflows.
+A conversation is an exchange; a persistent workspace maintains a continuing
+purpose across exchanges. A Project or context environment organizes related
+workspaces and shared orientation. A durable capability or system has an
+explicit responsibility and lifecycle beyond an interaction surface.
 
-AidenOS is not the entire Aiden Platform.
+These are possible steps, not mandatory maturity gates. A workspace may remain
+conversational indefinitely. Repeated complexity, multiple distinct workstreams,
+large source sets, or an independent lifecycle may justify a dedicated Project
+or more structured capability. Chat and Project boundaries organize human
+interaction; they do not define Sahale's ultimate knowledge or capability
+boundaries. ChatGPT is currently a primary interaction and incubation
+environment, not the platform itself.
 
 ### Infrastructure Environments
 
 Infrastructure environments include the homelab, workstation, WSL environment, cloud services, networking, storage, and future devices.
 
 They provide execution and operations but do not determine platform identity.
+
+---
+
+## Sahale and Homelab
+
+Sahale owns root/shared architecture, cross-domain contracts, shared Knowledge
+and Context, the AI operating model, coordination responsibilities, Interaction
+and Experience, and the root engineering foundations explicitly assigned to it.
+Homelab is a specialized infrastructure system/environment within this ecosystem.
+It has three distinct roles:
+
+| Role | Responsibility |
+| --- | --- |
+| Interaction workspace | Conversational environment for infrastructure work. |
+| Source / engineering domain | Public Homelab engineering; separately bounded restricted exact intended non-secret operational state; live runtime observation; and protected secret systems, each with its own authority and access boundary. |
+| Infrastructure execution environment | May host Sahale-owned context services, adapters, structured stores, automation workers, or local AI. These are possible deployments, not claims of existing services. |
+
+Execution location does not determine capability ownership. A Sahale-owned
+context service running on Homelab infrastructure remains a Sahale capability.
+`docs/architecture/repository.md` owns the first accepted specialized-repository
+boundary and the distinct public, restricted, live, and secret source placement.
+No Homelab repository creation or migration is implied.
 
 ---
 
@@ -201,7 +245,6 @@ A tool supports a workflow or implementation.
 Examples:
 
 - Artificial Intelligence is a capability.
-- Personal AI is a system.
 - A hosted model endpoint is a service.
 - A model-specific client is a tool.
 
@@ -229,23 +272,27 @@ Examples:
 
 Where suitable, begin with natural, manual, or conversational use:
 
-    natural use
+    natural/manual/chat use
     -> recurring friction and patterns
     -> actual requirements
-    -> smallest earned deterministic or software capability
+    -> smallest capability that earns implementation
     -> continued use and reevaluation
 
 Chat-first incubation is an explicit operating principle, not a universal
 starting point or an obligation to build software. Observed recurring need
-should earn deterministic state, automation, integrations, specialized UI, or
-software. Adopt software directly when requirements are already clear, retain
-a useful manual workflow, stop an unsuccessful experiment, or use an existing
+may justify better instructions, structured state, an integration, automation,
+a dedicated Project, UI, backend software, or no new software. A domain does
+not require its own software or architectural symmetry. Adopt software directly
+when requirements are already clear, retain a useful manual workflow, stop an
+unsuccessful experiment, or use an existing
 external capability instead of rebuilding it. Continued use tests whether the
 benefit still justifies the maintenance burden.
 
-Human-facing names should be simple and functional; add the Platform owner's
-name only when it conveys meaning. This preference does not rename repository,
-schema, machine, environment-variable, persisted-data, Atlas, or historical
+Human-facing workspaces should generally use simple functional names: Vision,
+Engineering, Homelab, Health, Fitness, Career, or Email. Prefixing each name with
+the owner or Sahale adds no value unless it conveys a specific distinction.
+This preference does not rename repository, schema, machine, environment-variable,
+persisted-data, Atlas, or historical
 identities.
 
 ---
@@ -278,7 +325,7 @@ Architecture owns durable design.
 
 - `docs/vision.md` explains why the platform exists.
 - `docs/architecture/capabilities.md` defines stable capability identities.
-- `docs/architecture/ai.md` defines Artificial Intelligence and Personal AI.
+- `docs/architecture/ai.md` defines Artificial Intelligence.
 - `docs/architecture/repository.md` defines repository authority.
 - `docs/architecture/atlas.md` defines the engineering control plane.
 - `docs/roadmaps/platform-strategy.md` defines dated sequencing.

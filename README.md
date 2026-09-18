@@ -1,9 +1,14 @@
-# Aiden Platform
+# Sahale
 
-> A human-directed engineering platform for applied AI, deterministic tooling,
-> and self-hosted infrastructure.
+> A human-directed personal capability platform for learning, building,
+> knowledge, AI, and useful everyday systems.
 
-`aiden-platform` is the root Platform engineering repository for shared systems,
+Sahale is the human-facing platform identity. ChatGPT is currently a primary
+interaction and capability-incubation environment; it is not Sahale itself.
+Neither one repository, the Homelab, one database, one model, nor one execution
+environment defines the platform.
+
+`aiden-platform` remains the root Sahale engineering repository for shared systems,
 Platform-wide architecture, cross-domain contracts, and explicitly assigned
 responsibilities. It supports useful capability with explicit authority,
 reproducible evidence, and replaceable technology.
@@ -47,6 +52,14 @@ specialized engineering repositories, restricted operational records, external
 systems, and live systems may own distinct responsibilities. Atlas and typed
 state describe this repository; they are not a universal Platform ledger.
 See [Repository Architecture](docs/architecture/repository.md) for ownership.
+
+[Context Coordination](docs/architecture/context-coordination.md) defines the
+intended planning responsibility above existing deterministic context
+compilation. It aims at automatic bounded context resolution across sources,
+not centralization. Its runtime remains deferred; retrieval never grants action
+authority. [Platform Architecture](docs/architecture/platform.md) distinguishes
+workspaces, Projects, and durable capabilities, and Homelab’s workspace, source,
+and infrastructure roles. Hosting a Sahale service does not change its owner.
 
 ```text
 Human owner
@@ -160,33 +173,39 @@ The canonical boundaries and trigger for a future restricted source are in
 
 ## Current and Future
 
-The September 2026 operating-model recalibration accepts Homelab as a
-specialized-repository candidate; it does not create that repository or move
-content. Suitable capabilities may incubate through natural or conversational
-use and earn software through recurring need. AI/tool recommendations remain
-advisory and human-overridable under the existing
-[AI Operating Model](docs/architecture/ai-operating-model.md).
+Sahale capabilities may grow from natural/manual/chat use through recurring
+friction, actual requirements, and the smallest capability that earns
+implementation, followed by continued use and reevaluation. Instructions,
+structured state, integration, automation, a Project, UI, backend software, or
+continued conversation can each be the appropriate outcome. Workspaces use
+functional names such as Vision, Engineering, Homelab, Health, Fitness, Career,
+and Email. A dedicated Sahale UI remains deferred until useful capabilities
+exist for it to expose.
 
-The repository-local lifecycle below concerns the earlier repository-identity
-R1 and published engineering phases, not acceptance or publication of this
-September recalibration.
+Homelab is the first accepted specialized-repository boundary. Its creation,
+extraction, restricted operational source, and migrations remain future work.
+Local AI, broader knowledge sovereignty, additional recovery proof, and an
+automatic coordination runtime are also future or conditional work.
 
-The [canonical state](docs/current-state.json) keeps W2 / Workflow v1.2 as the published phase,
-records R1 as owner-accepted, published, and complete, and intentionally
-selects no implementation checkpoint. S1, F2, F3, and all other future work
-remain unselected; the next decision is owner selection of future work. The
-live GitHub repository is `aidenm727/aiden-platform`; the verified rename,
-approved description and topics, redirect behavior, profile pin, connector,
-and local origin update are recorded in the dated R1 evidence. The accepted
-lifecycle correction was published on 2026-08-07 as immutable R1 publication
-commit `483f1111257c9b1608c100cb88c8304a17d85314`.
+The [canonical state](docs/current-state.json) preserves W2 / Workflow v1.2 as
+the published phase and selects R2 — Sahale Repository Architecture Refresh.
+R2 is a local architecture candidate, with owner acceptance and publication as
+separate later gates. It changes no machine identity. The canonical GitHub
+repository remains `aidenm727/aiden-platform`; the existing local checkout,
+compiler identity, schemas, environment variables, persisted data, compatibility
+references, and historical evidence retain their identities.
 
-Aiden Platform began as a ThinkPad T430 homelab and grew into a broader personal
-engineering platform. Current delivered capability centers on School Learning,
-Atlas/Workflow v1.2, task-scoped context compilation, and public-safe dated
-infrastructure evidence. Local AI, a private operations repository, broader
-knowledge sovereignty, and additional recovery proof remain future or
-conditional work.
+Repository-identity R1 remains owner-accepted, published, and complete at
+`483f1111257c9b1608c100cb88c8304a17d85314`. C1 is the owner-confirmed published
+baseline for R2. [Current Mission](docs/current-mission.md) records the detailed
+lifecycle and current boundary; S1, F2, F3, and other future work are unselected.
+
+Sahale grew from the earlier Aiden Platform and a ThinkPad T430 homelab. Current
+delivered capability centers on School Learning, Atlas/Workflow v1.2,
+task-scoped compilation, and public-safe dated infrastructure evidence. Earlier
+Personal AI and AidenOS concepts now map to the durable AI, Knowledge and
+Context, coordination, Automation and Integration, and Interaction and
+Experience responsibilities; they do not require replacement products.
 
 ## Navigate Deeper
 

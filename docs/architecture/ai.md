@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Artificial Intelligence is a first-class, cross-cutting foundation of the Aiden Platform.
+Artificial Intelligence is a first-class, cross-cutting foundation of Sahale.
 
 Its purpose is to increase the owner's agency by improving reasoning, learning, engineering, research, knowledge use, planning, creation, and bounded automation.
 
@@ -22,7 +22,8 @@ Artificial Intelligence supports other foundations and Human Agency Domains but 
 - AI assists Health and Wellbeing but does not make medical decisions.
 - AI assists Economic Agency but does not own career, business, or financial commitments.
 - AI assists Engineering and Evolution but does not own architecture or high-impact changes.
-- AI may power AidenOS experiences but is not synonymous with AidenOS.
+- AI may power Sahale interaction surfaces but does not define the platform or
+  its interfaces.
 
 ---
 
@@ -41,7 +42,7 @@ The owner remains responsible for long-term direction, architecture, security-se
 
 ## Operational Architecture
 
-This document owns durable Artificial Intelligence and Personal AI architecture.
+This document owns durable Artificial Intelligence architecture.
 
 Recurring operational decisions are owned by specialized architecture:
 
@@ -52,24 +53,23 @@ The specialized documents apply this architecture without redefining its princip
 
 ---
 
-## Personal AI
+## Shared AI Responsibilities
 
-Personal AI is the cross-cutting intelligence subsystem of the Aiden Platform.
+AI supports research, synthesis, personal context, tutoring, planning,
+engineering, creative assistance, briefings, and bounded actions through the
+existing foundations. The earlier Personal AI framing described a cross-cutting
+intelligence subsystem; it is retained as historical terminology, not a current
+requirement for a separately named product or runtime.
 
-It composes:
+Sahale is the wider personal capability platform, not an assistant persona or
+model. ChatGPT is currently a primary interaction and capability-incubation
+environment. Workspaces and Projects organize that interaction under
+`docs/architecture/platform.md`; they do not determine canonical knowledge scope.
 
-- Artificial Intelligence.
-- Knowledge and Context.
-- Automation and Integration.
-- Security, Privacy, and Resilience.
-- Interaction and Experience.
-- Relevant Human Agency Domains.
-
-It may provide research, synthesis, personal context, knowledge retrieval, tutoring, planning, engineering support, creative assistance, briefings, domain decision support, and bounded actions.
-
-Personal AI is not one assistant persona.
-
-It is a shared capability layer that may be exposed through multiple interfaces.
+Coordination may eventually use AI to interpret a task and suggest categories
+of relevant context. Deterministic metadata and source contracts establish
+source identity, ownership, authority, and permitted use. AI cannot invent
+those facts. `docs/architecture/context-coordination.md` owns that boundary.
 
 ---
 
@@ -222,7 +222,7 @@ High-impact actions remain independently gated, including architecture changes, 
 
 ---
 
-## Relationship to Atlas and AidenOS
+## Relationship to Atlas and Interaction
 
 Canonical repository owners own engineering state and contracts.
 Atlas deterministically observes, validates, interprets, and presents them
@@ -231,11 +231,11 @@ task, implementation, publication, deployment, or external-write authority.
 
 AI systems consume Atlas evidence rather than redefining repository state through conversational confidence.
 
-AidenOS is the Interaction and Experience environment.
-
-Personal AI may be a major part of AidenOS, but AidenOS should also expose deterministic tools, knowledge, services, and workflows that do not depend on AI.
-
-AI and AidenOS therefore remain separate capability identities.
+Interaction and Experience owns conversations, workspaces, review surfaces,
+and a possible future Sahale UI. The earlier AidenOS concept does not establish
+a current product identity or an implementation requirement. Interfaces may
+expose deterministic tools, knowledge, services, and workflows as well as AI.
+A dedicated UI remains deferred until useful capabilities justify it.
 
 ---
 
@@ -249,16 +249,16 @@ Evaluation should remain explainable rather than becoming one opaque universal s
 
 ## Initial Direction
 
-Near-term work should prioritize AI operating rules, data classification, provider evaluation, Personal AI boundaries, knowledge ownership, career and research intelligence, and manual proof of useful workflows.
+Near-term work should prioritize AI operating rules, data classification, provider evaluation, context and action boundaries, knowledge ownership, career and research intelligence, and manual proof of useful workflows.
 
 The bounded task-context compilation library is implemented under
 `docs/architecture/task-scoped-agent-context-compilation.md`, with structured
 resources owned by `docs/task-context/index.md`. This does not establish a
-general context CLI, production runtime, or Personal AI implementation.
+general context CLI, coordination runtime, or automatic cross-domain retrieval.
 
 Later work may include local AI experiments, additional context consumers,
 task contracts, autonomy policy, versioned skills, execution evidence, bounded
-repair loops, and AidenOS experiences. Personal AI implementation remains
-deferred.
+repair loops, and useful interaction surfaces. Coordination services and a
+dedicated Sahale UI remain deferred.
 
 The platform should become progressively more capable without becoming progressively more dependent.

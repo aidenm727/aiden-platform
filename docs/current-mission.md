@@ -24,14 +24,16 @@ synchronization. The School Learning Operational Loop passed its final
 independent Tier-2 review with no BLOCKING, MATERIAL, or MINOR findings, is
 owner-accepted, and is published and complete at
 `00805e67057fcd68e9ea465749a2c8a1df2cd7f7`. Publication completed on
-2026-08-31. No implementation checkpoint is selected, and repository work
-selection is intentionally idle.
+2026-08-31. The owner has now selected and authorized R2 — Sahale Repository
+Architecture Refresh under the accepted N0/N1 architecture. R2 is an
+uncommitted local candidate, not owner-accepted or published.
 
-Canonical state effective date: 2026-09-16.
+Canonical state effective date: 2026-09-18.
 
-C1 is a locally authorized baseline-cleanup candidate, not a published
-checkpoint or a selection of follow-on capability work. Its verification and
-acceptance boundary is recorded in
+C1 is the owner-confirmed published baseline at
+`5dc5ccb75556aee74a6684a231fa012350d403e4`, also the locally observed base
+and tracking identity at R2 startup. No remote verification was performed. Its
+historical pre-publication verification and acceptance boundary is recorded in
 `docs/reviews/current-state-baseline-debt-c1-evidence-2026-09-16.md`. The
 September 8 School storage spike is retained only as provisional dated
 evidence; its proposed architecture is not accepted and its unfinished review
@@ -41,14 +43,16 @@ gate remains open. No School runtime or storage change is selected here.
 
 Preserve published W2, historical W1, completed R1, G14, SL2-A, and the School Learning
 Operational Loop, human authority, generated ownership, and all public/private
-boundaries while the owner selects future work. No deployment, live-data
+boundaries during the bounded R2 architecture refresh. No deployment, live-data
 migration, Canvas/Gmail/Calendar integration, or operational-runtime state is
 established.
 
 ## Work Selection
 
-- Status: Intentional idle.
-- Selected checkpoint: None.
+- Status: Selected.
+- Selected checkpoint: R2 — Sahale Repository Architecture Refresh.
+- R2 boundary: Architecture refresh only; local implementation authorized,
+  candidate acceptance required, no publication or deployment authority.
 - G14 lifecycle: Owner-accepted, published, and complete; not active selected
   work. Deployment, live collection, and operational runtime are not claimed.
 - W2 lifecycle: Published repository workflow; not active selected work.
@@ -65,7 +69,7 @@ established.
 
 ## Next Milestone
 
-Intentional idle — no engineering checkpoint is selected.
+R2 — Sahale Repository Architecture Refresh
 
 ## Blockers
 
@@ -77,9 +81,29 @@ None recorded in canonical active state.
 
 ## Owner Decision Required
 
-Owner selection of future work; no checkpoint or later capability is
-preselected. S1, F2, F3, SL2-B, and all other future implementation checkpoints
-remain unselected.
+Owner acceptance of the exact verified and independently reviewed R2 candidate;
+publication remains separately unauthorized. S1, F2, F3, SL2-B, and all other
+future implementation checkpoints remain unselected.
+
+## R2 Architecture and Identity Boundary
+
+Sahale is the human-facing personal capability platform identity; the existing
+`aidenm727/aiden-platform` repository, checkout, compiler identity, schemas,
+environment variables, persisted data, and historical evidence are unchanged.
+The generated `docs/aiden-context.md` filename and Aiden heading remain
+compatibility presentation from the existing generator, not a different
+platform identity. Context coordination is a cross-cutting responsibility
+above the existing deterministic compiler, with no new runtime. Homelab's
+workspace, source/domain, and execution roles remain distinct from Sahale
+capability ownership. No UI, extraction, identity migration, or external action
+is selected.
+
+The owner reports that the ChatGPT Project is now Sahale, with functional
+workspace names and one bounded `sahale-orientation.md` source replacing six
+static dated sources. This is supplied interaction/design evidence, not
+independently inspected configuration or canonical engineering truth. Durable
+architecture belongs in the designated repository owners; Project configuration
+is not managed by R2.
 
 ## Authority Boundary
 
@@ -91,6 +115,11 @@ requires explicit owner authority outside repository state and Atlas.
 `AGENTS.md` is the primary repository-local authority-interpretation contract.
 
 ## Evidence and History
+
+- `docs/reviews/sahale-r2-architecture-refresh-evidence-2026-09-18.md` — local
+  uncommitted Tier-3 R2 evidence and review boundary. The selected checkpoint's
+  typed evidence refs remain empty because the schema requires immutable
+  commit-backed links; no R2 commit is invented and no schema change is made.
 
 - `docs/reviews/engineering-workflow-v1-2-evidence-2026-09-16.md` — W2
   implementation evidence at `d40c2891bd5cf79f674498ac6b5fed6bb1beac47`.

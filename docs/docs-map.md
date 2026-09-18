@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This document is the navigation starting point for the root Platform engineering
+This document is the navigation starting point for the root Sahale engineering
 repository and its assigned scope. `docs/architecture/repository.md` defines
 selective specialized ownership; `docs/architecture/knowledge-authority.md`
 defines source-scoped authority.
@@ -50,6 +50,7 @@ Repository Objects and engineering tools support these layers.
 
 - `docs/architecture/ai-operating-model.md`
 - `docs/architecture/knowledge-authority.md`
+- `docs/architecture/context-coordination.md` — Cross-cutting bounded source-resolution responsibility above deterministic compilation; future runtime remains deferred.
 - `docs/architecture/task-scoped-agent-context-compilation.md`
 - `docs/task-context/index.md`
 
@@ -138,7 +139,9 @@ observation own current reality; secret values never belong in Git.
 
 ## Portfolio Reviews
 
-- `docs/reviews/current-state-baseline-debt-c1-evidence-2026-09-16.md` — C1 baseline-cleanup candidate evidence; verification and owner-acceptance boundaries remain explicit.
+- `docs/reviews/sahale-r2-architecture-refresh-evidence-2026-09-18.md` — R2 scope, baseline, architecture reconciliation, migration couplings, verification/review boundary, and owner-acceptance handoff.
+
+- `docs/reviews/current-state-baseline-debt-c1-evidence-2026-09-16.md` — Historical C1 baseline-cleanup evidence; the current owner confirms publication at `5dc5ccb75556aee74a6684a231fa012350d403e4`, without rewriting its pre-publication narrative.
 - `docs/reviews/engineering-workflow-v1-2-evidence-2026-09-16.md` — Dated W2 implementation evidence; Workflow v1.2 is the published phase recorded in canonical current state.
 - `docs/reviews/school-learning-vnext-storage-spike-evidence-2026-09-08.md` — Retained provisional synthetic evidence, public-surface sanitized in C1; no architecture acceptance, promotion, or completed final spike review is claimed.
 
@@ -209,6 +212,9 @@ refresh without rewriting those historical bodies.
 9. `docs/current-mission.md`
 
 ### AI and Knowledge Work
+
+For cross-source planning, read `docs/architecture/context-coordination.md`
+alongside the authority and compilation owners below.
 
 1. `docs/vision.md`
 2. `docs/architecture/platform.md`

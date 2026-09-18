@@ -2,7 +2,7 @@
 
 ## Purpose
 
-`aiden-platform` is the root Platform engineering repository. It owns Platform-wide architecture, shared capabilities and systems, cross-domain contracts, root engineering coordination, and responsibilities explicitly assigned to it.
+`aiden-platform` is the root Sahale engineering repository. It owns Platform-wide architecture, shared capabilities and systems, cross-domain contracts, root engineering coordination, and responsibilities explicitly assigned to it.
 
 It preserves vision, architecture, standards, infrastructure, operations, roadmaps, Repository Objects, generated context, and engineering tools.
 
@@ -31,11 +31,22 @@ repository evidence. The September 2026 recalibration accepts that boundary;
 it does not create a repository, extract or migrate Homelab material, or claim
 that external evidence was independently inspected in this checkpoint.
 
+The Homelab workspace, source/engineering domain, and execution environment
+are distinct roles under `docs/architecture/platform.md`. Hosting a Sahale
+service does not transfer its capability ownership to Homelab.
+
 Atlas remains local to `aiden-platform`. This ownership model introduces no
 repository registry, synchronization protocol, federation runtime, or change
 to task-context compilation.
 
 ## Repository Identity
+
+Sahale is the human-facing platform identity. It is broader than this repository,
+ChatGPT, Homelab, or any execution environment. Presentation identity does not
+rename machine, schema, compatibility, persisted-data, or historical identities.
+The current local checkout remains unchanged; its historical basename is
+`t430-homelab`. Potential future repository and checkout names require a separate
+identity-migration checkpoint.
 
 The current canonical compiler identity is
 `github.com/aidenm727/aiden-platform`, and the canonical public repository and
@@ -89,6 +100,7 @@ Primary owners:
 - `docs/architecture/ai.md`
 - `docs/architecture/ai-operating-model.md`
 - `docs/architecture/knowledge-authority.md`
+- `docs/architecture/context-coordination.md`
 - `docs/architecture/repository.md`
 - `docs/architecture/atlas.md`
 - `docs/architecture/task-scoped-agent-context-compilation.md`
@@ -184,6 +196,9 @@ Examples:
 - `docs/infrastructure-snapshot.md`
 
 Generated artifacts must declare their sources, managing tool, and generated status.
+`docs/aiden-context.md` retains its compatibility filename and generator-owned
+Aiden heading; these are not the human-facing platform identity. R2 changes no
+generator identity contract.
 
 ---
 
@@ -266,9 +281,10 @@ generated context, historical records, and roadmaps do not grant permission.
 - Purpose and long-term direction belong in `docs/vision.md`.
 - Platform structure belongs in `docs/architecture/platform.md`.
 - Capability taxonomy belongs in `docs/architecture/capabilities.md`.
-- AI and Personal AI architecture belong in `docs/architecture/ai.md`.
+- AI architecture belongs in `docs/architecture/ai.md`.
 - Recurring model, provider, deployment, and AI-use decisions belong in `docs/architecture/ai-operating-model.md`.
 - Knowledge authority, provenance, and promotion belong in `docs/architecture/knowledge-authority.md`.
+- Cross-source context coordination belongs in `docs/architecture/context-coordination.md`; its future runtime does not replace deterministic compilation.
 - Deterministic compilation of bounded, task-specific generated context packages and their authority, selection, provenance, size, validation, and consumer boundaries belongs in `docs/architecture/task-scoped-agent-context-compilation.md`.
 - The bounded School Learning workflow, local course-data contract, manual approved-AI handoff, and generated local views belong in `docs/architecture/school-learning.md`.
 - Personal course materials, answers, learning history, and generated personal views remain outside the engineering repository. The repository owns School Learning architecture and implementation, not personal school data.

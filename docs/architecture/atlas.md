@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Atlas is the deterministic engineering interface for the Aiden Platform.
+Atlas is the repository-local deterministic engineering interface for Sahale.
 
 Its purpose is to reduce friction between engineering intent and implementation while increasing understanding of the platform.
 
@@ -14,15 +14,16 @@ Instead, it exposes deterministic repository knowledge and engineering reasoning
 
 ---
 
-# Role in the Aiden Platform
+# Role in Sahale
 
-The Aiden Platform consists of several complementary systems.
+Sahale is the broader personal capability platform. This root repository owns
+its explicitly assigned engineering responsibilities, not all platform facts.
 
-The repository is the canonical engineering record.
-
-Personal AI is the cross-cutting intelligence subsystem of the Aiden Platform,
-as defined in `docs/architecture/ai.md`. The Aiden Platform names the broader
-ecosystem, not that subsystem.
+AI responsibilities belong to `docs/architecture/ai.md`; cross-cutting context
+coordination belongs to `docs/architecture/context-coordination.md`. The earlier
+Personal AI subsystem framing does not require a separate product or runtime.
+Coordination may eventually plan across distributed authoritative sources; it
+does not replace Atlas or the implemented deterministic context compiler.
 
 Atlas is the deterministic engineering interface that allows engineers and AI assistants to understand, inspect, validate, and evolve the repository.
 
@@ -267,7 +268,7 @@ Examples include:
 - Generated AI context
 - Future dashboards
 - Future VS Code integrations
-- Future Aiden OS engineering workflows
+- Future Sahale interaction surfaces, if separately justified
 
 `atlas bootstrap`, `atlas state`, `atlas review`, and `atlas next` consume the
 same readiness projection so phase, work selection, authority, blockers,

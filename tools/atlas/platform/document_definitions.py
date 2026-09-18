@@ -16,6 +16,33 @@ class DocumentDefinition:
 
 
 DOCUMENT_DEFINITIONS = {
+    "docs/architecture/context-coordination.md": DocumentDefinition(
+        path="docs/architecture/context-coordination.md",
+        purpose="Defines Sahale's cross-cutting bounded context-resolution responsibility across distributed authoritative sources, above the existing deterministic compiler, without implementing a coordination runtime.",
+        capability="Knowledge and Context",
+        tags=["knowledge-context", "context-coordination", "source-authority"],
+        related=[
+            "docs/architecture/platform.md",
+            "docs/architecture/capabilities.md",
+            "docs/architecture/knowledge-authority.md",
+            "docs/architecture/ai.md",
+            "docs/architecture/ai-operating-model.md",
+            "docs/architecture/task-scoped-agent-context-compilation.md",
+            "docs/architecture/repository.md",
+        ],
+    ),
+    "docs/reviews/sahale-r2-architecture-refresh-evidence-2026-09-18.md": DocumentDefinition(
+        path="docs/reviews/sahale-r2-architecture-refresh-evidence-2026-09-18.md",
+        purpose="Preserves the Tier-3 R2 scope, baseline, architecture reconciliation, future identity-migration couplings, verification and independent-review boundary for an uncommitted candidate.",
+        canonical=False,
+        capability="Engineering and Evolution",
+        tags=["sahale", "architecture-refresh", "checkpoint-evidence"],
+        related=[
+            "docs/architecture/context-coordination.md",
+            "docs/current-state.json",
+            "docs/current-mission.md",
+        ],
+    ),
     "docs/vision.md": DocumentDefinition(
         path="docs/vision.md",
         purpose="Defines why the Aiden Platform exists, its North Star, principles, human authority, non-goals, and long-term direction.",
